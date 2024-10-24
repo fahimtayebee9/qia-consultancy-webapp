@@ -1,0 +1,4 @@
+[23-Dec-2023 14:34:23 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 53248 bytes) in /home/qia/public_html/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php on line 43
+[23-Dec-2023 14:42:32 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 32768 bytes) in /home/qia/public_html/storage/framework/views/ba99c47d0f0a30ffb9dd27c1700138bf5bd2b915.php on line 371
+[23-Dec-2023 14:42:44 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 16384 bytes) in /home/qia/public_html/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 330
+[23-Dec-2023 14:46:31 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 65536 bytes) in /home/qia/public_html/vendor/laravel/framework/src/Illuminate/View/Concerns/ManagesLayouts.php on line 94
