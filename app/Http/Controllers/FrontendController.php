@@ -714,6 +714,20 @@ class FrontendController extends Controller
         $meta->script_tag = "";
         $meta->meta_description = "We offers inspection, survey, laboratory testing and diving services for a wide range of agricultural, industrial and marine products.";
 
+        return view('frontend.static_qiss_lab', compact('meta'));
+    }
+
+    public function staticQISSLabV2() 
+    {
+        $meta = new \stdClass();
+
+        $meta->title = "Marine Cargo Inspection";
+        $meta->meta_title = "Marine Cargo Inspection";
+        $meta->meta_keyword = "";
+        $meta->article_tag = "";
+        $meta->script_tag = "";
+        $meta->meta_description = "We offers inspection, survey, laboratory testing and diving services for a wide range of agricultural, industrial and marine products.";
+
         return view('frontend.static_qiss_lab-v2', compact('meta'));
     }
     

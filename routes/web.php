@@ -13,6 +13,7 @@ Route::get('qms-management', 'FrontendController@staticQMSManagement')->name('qm
 Route::get('ncr-management', 'FrontendController@staticNCRManagement')->name('ncr-management');
 Route::get('lab-management', 'FrontendController@staticLABManagement')->name('lab-management');
 Route::get('qiss-lab', 'FrontendController@staticQISSLab')->name('qiss-lab');
+Route::get('qiss-lab-demo', 'FrontendController@staticQISSLabV2')->name('qiss-lab-v2');
 Route::get('old-qms-management', 'FrontendController@staticOldQMSManagement')->name('old-qms-management');	
 // Static Menu End
 

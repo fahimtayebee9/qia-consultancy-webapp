@@ -10,7 +10,12 @@
         <link rel="canonical" href="{{ Request::url() }}" />
         <!--<link rel=alternate href="https://www.qi-a.com" hreflang=en-US />-->
         <link rel="icon" type="image/png" href="{{ asset('storage/logo/'. get_option('favicon')) }}">
-        <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+        @if(Route::currentRouteName() === 'qiss-lab-v2')
+            <meta name="robots" content="noindex, nofollow">
+        @else
+            <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+        @endif
+
         <meta name="google-site-verification" content="jDuDbVHWdvLqEozHeXP1WaMogup96b5tmJMABcckKaI" />
 
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">

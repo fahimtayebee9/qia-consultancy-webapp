@@ -83,48 +83,62 @@
             line-height: 24px;
             padding-bottom: 20px;
         }
+
+        .btn-demo {
+            background: #E7F1FB;
+            color: #004c94;
+            transition: 0.3s all ease-in-out;
+            padding: 14px 40px 14px 40px;
+            border-radius: 30px 30px 30px 30px;
+        }
+
+        .btn-demo:hover {
+            background: #a50031;
+            color: #E7F1FB;
+            box-shadow: 0 0 5px 0 #a50031;
+        }
+        
+        .accdordion-title{
+            font-size: 18px;
+            font-weight: 500;
+            text-decoration: none!important;
+            color: #181818;
+        }
+        .industry-title{
+            font-size: 18px;
+            font-weight: 500;
+            color: #181818;
+            margin-top: 15px;
+            display: block;
+        }
     </style>
 
     <!-- Banner Section Start -->
     <div class="qia-banner main-home pt-100 pb-100  md-pt-80 md-pb-80"
-        style="background: url({{ asset('storage/logo/' . get_option('banner_background_picture')) }});" alt="QIA">
+        style="background: url({{ asset('storage/qiss-lab/hero-bg.jpg') }});" alt="QIA">
         <div class="container">
             <div class="row">
-                <div class="col-lg-7 col-md-12 pr-140 md-mb-70 md-pr-15">
+                <div class="col-lg-7 col-md-12 pr-30 md-mb-70 md-pr-15">
                     <div class="content-wrap">
-                        <h1 class="it-title">
+                        <h1 class="it-title" style="font-size: 44px!important;">
                             QISS LAB - A Laboratory Workflow Management Software
                         </h1>
                         <div class="description">
-                            <p class="desc">
-                                QISS LAB is a comprehensive lab management software designed to address common challenges in
-                                laboratory operations. Many labs struggle with disorganized data, inefficient resource
-                                allocation, and compliance issues, leading to wasted time and increased costs. Our easy to
-                                use software offers a seamless solution by providing powerful features. With QISS LAB, you
-                                can streamline workflows, improve productivity, and ensure accurate reporting, all while
-                                maintaining compliance and facilitating collaboration.
+                            <p class="desc" style="text-align: justify">
+                                QISS LAB is a comprehensive lab workflow management software designed to address common
+                                challenges in laboratory operations. Many labs struggle with disorganized data, inefficient
+                                resource allocation, and compliance issues, leading to wasted time and increased costs. Our
+                                easy-to-use lab software offers a seamless solution that provides powerful features. With
+                                QISS LAB, you can streamline workflows, improve productivity, and ensure accurate reporting,
+                                all while maintaining compliance and facilitating collaboration.
                             </p>
                         </div>
-
-                        <a class="readon learn-more" href="https://www.qi-a.com/contact">Get A Free Demo</a>
+                        <a class="readon btn-demo" href="https://www.qi-a.com/contact">Get A Free Demo</a>
                     </div>
                 </div>
 
-                <div class="col-lg-5 col-md-12 pl-70 md-pl-15">
-                    <div class="qia-contact main-media">
-                        <div class="video-item"
-                            style="background: url({{ asset('storage/logo/' . get_option('banner_video_picture')) }});"
-                            alt="QIA">
-                            <div class="qia-videos">
-                                <div class="animate-border main-home style2">
-                                    <a class="popup-border content_management" data-url="{{ route('show-banner-video') }}"
-                                        href="javascript:;">
-                                        <i class="fa fa-play"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-lg-5 col-md-12 pl-30 md-pl-15 align-middle">
+                    <img src="{{ asset('storage/qiss-lab/lab-manager-is-talking-with-chemist-about-the-report.jpg') }}" alt="Automate Your Lab Management System">
                 </div>
             </div>
         </div>
@@ -136,7 +150,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 text-center pb-3">
-                    <h2 style="font-size: 23px !important;font-weight: bold; margin-top:0px;margin-bottom: 20px;">
+                    <h2 style="font-size: 32px!important;font-weight: bold; margin-top:0px;margin-bottom: 20px;">
                         Our Clients
                     </h2>
                 </div>
@@ -164,29 +178,29 @@
     <!-- Client Partner Section End -->
 
     <!-- How We can Help - Start -->
-    <div class="qia-about pt-5 pb-120 bg13  md-pt-80 md-pb-80">
+    <div class="qia-about pb-120 md-pt-80 md-pb-80" style="padding-top: 40px;background: #E7F1FB">
         <div class="container">
-            <div class="row">
+            <div class="row" style="padding-bottom: 40px;">
                 <div class="col-12 col-md-12 col-lg-12 col-xl-12">
-                    <h2 class="title text-center mb-5 mt-0 font-weight-bold text-capitalize"
-                        style="font-size: 23px !important;">
+                    <h2 class="title text-center mb-0 mt-0 font-weight-bold text-capitalize"
+                        style="font-size: 30px !important;">
                         How Can Our Laboratory Management Software Help You?
                     </h2>
                 </div>
             </div>
             <div class="qia-help row align-items-center pt-50 pb-50">
-                <div class="col-lg-6 order-lg-1 pl-60 md-pl-15">
+                <div class="col-lg-6 order-lg-1">
                     <div class="contact-wrap">
-                        <div class="sec-title mb-30">
-                            <h3 class="title pb-38">
+                        <div class="sec-title mb-0">
+                            <h3 class="title pb-5">
                                 Automate Your Lab Management System
                             </h3>
-                            <div class="desc pb-35">
-                                Automating your lab management system can significantly enhance efficiency and accuracy. By
-                                integrating QISS LAB software, you can streamline processes such as sample tracking,
-                                inventory management, and data analysis. Automation reduces human error, ensuring reliable
-                                results and better compliance with regulatory standards.
-                            </div>
+                            <p class="desc pb-0 m-0" style="text-align: justify">
+                                Automating your lab management system can significantly improve efficiency and accuracy. By
+                                integrating QISS LAB software, you can simplify processes such as sample tracking, inventory
+                                management, and data analysis. Automation reduces human error, ensuring reliable results and
+                                better compliance with regulatory standards.
+                            </p>
                         </div>
                         {{-- <div class="btn-part">
                             <a class="readon learn-more"
@@ -197,26 +211,26 @@
                 </div>
                 <div class="col-lg-6 order-lg-2">
                     <div class="home8-about z-index-1">
-                        <img src="{{ asset('storage/logo/' . get_option('home_about_picture')) }}"
-                            alt="{{ get_option('home_about_alt_tag') }}">
+                        <img src="{{ asset('storage/qiss-lab/automate-lab-workflow.jpg') }}"
+                            alt="Automate Your Lab Management System">
                     </div>
                 </div>
             </div>
             <div class="qia-help row align-items-center pt-50 pb-50">
-                <div class="col-lg-6 order-lg-2 pl-60 md-pl-15">
+                <div class="col-lg-6 order-lg-2">
                     <div class="contact-wrap">
-                        <div class="sec-title mb-30">
-                            <h3 class="title pb-38">
+                        <div class="sec-title mb-0">
+                            <h3 class="title pb-5">
                                 Increase Productivity & Save Time
                             </h3>
-                            <div class="desc pb-35">
+                            <p class="desc pb-0 m-0" style="text-align: justify">
                                 Lab management software improves productivity and saves time by automating routine tasks.
-                                With streamlined workflows, researchers can focus on critical activities rather than
+                                With simplified workflows, researchers can focus on critical activities rather than
                                 administrative burdens. Real-time data access enables quick decision-making, while automated
-                                reporting features minimize manual documentation. By optimizing resource allocation, lab
-                                management software creates a more efficient environment, ultimately leading to faster
+                                reporting features minimize manual documentation. By optimizing resource allocation,
+                                laboratory software creates a more efficient environment, ultimately leading to faster
                                 research outcomes and improved overall performance.
-                            </div>
+                            </p>
                         </div>
                         {{-- <div class="btn-part">
                             <a class="readon learn-more"
@@ -227,26 +241,26 @@
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="home8-about z-index-1">
-                        <img src="{{ asset('storage/logo/' . get_option('home_about_picture')) }}"
-                            alt="{{ get_option('home_about_alt_tag') }}">
+                        <img src="{{ asset('storage/qiss-lab/improve-productivity.jpeg') }}"
+                            alt="Increase Productivity & Save Time">
                     </div>
                 </div>
             </div>
             <div class="qia-help row align-items-center pt-50 pb-50">
-                <div class="col-lg-6 order-lg-1 pl-60 md-pl-15">
+                <div class="col-lg-6 order-lg-1">
                     <div class="contact-wrap">
-                        <div class="sec-title mb-30">
-                            <h3 class="title pb-38">
+                        <div class="sec-title mb-0">
+                            <h3 class="title pb-5">
                                 Reducing Risk of Errors
                             </h3>
-                            <div class="desc pb-35">
-                                Our software can significantly reduces the risk of errors by automating data entry and
+                            <p class="desc pb-0 m-0" style="text-align: justify">
+                                Our software can significantly reduce the risk of errors by automating data entry and
                                 standardizing processes. By minimizing manual tasks, it decreases the likelihood of human
                                 mistakes, ensuring more accurate results. Real-time data validation alerts users to
                                 discrepancies, enhancing data integrity. Implementing a lab management software fosters a
                                 more reliable environment, allowing researchers to focus on quality and precision in their
                                 work.
-                            </div>
+                            </p>
                         </div>
                         {{-- <div class="btn-part">
                             <a class="readon learn-more"
@@ -257,25 +271,25 @@
                 </div>
                 <div class="col-lg-6 order-lg-2">
                     <div class="home8-about z-index-1">
-                        <img src="{{ asset('storage/logo/' . get_option('home_about_picture')) }}"
-                            alt="{{ get_option('home_about_alt_tag') }}">
+                        <img src="{{ asset('storage/qiss-lab/risk-of-error.jpg') }}" alt="Reducing Risk of Errors">
                     </div>
                 </div>
             </div>
             <div class="qia-help row align-items-center pt-50 pb-50">
-                <div class="col-lg-6 order-lg-2 pl-60 md-pl-15">
+                <div class="col-lg-6 order-lg-2">
                     <div class="contact-wrap">
-                        <div class="sec-title mb-30">
-                            <h3 class="title pb-38">
+                        <div class="sec-title mb-0">
+                            <h3 class="title pb-5">
                                 Prevent Raw Data Loss
                             </h3>
-                            <div class="desc pb-35">
+                            <p class="desc pb-0 m-0" style="text-align: justify">
                                 Preventing data loss is crucial in lab management, and our specialized QISS LAB software
                                 offers robust solutions. Automated backups ensure that critical research data is securely
                                 stored and easily retrievable. Real-time monitoring alerts users to potential issues, while
-                                user access controls safeguard sensitive information. By centralizing data management, lab
-                                management software minimizes risks, enhancing both compliance and research integrity.
-                            </div>
+                                user access controls safeguard sensitive information. By centralizing data management,
+                                laboratory management software minimizes risks, improving both compliance and research
+                                integrity.
+                            </p>
                         </div>
                         {{-- <div class="btn-part">
                             <a class="readon learn-more"
@@ -286,8 +300,7 @@
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="home8-about z-index-1">
-                        <img src="{{ asset('storage/logo/' . get_option('home_about_picture')) }}"
-                            alt="{{ get_option('home_about_alt_tag') }}">
+                        <img src="{{ asset('storage/qiss-lab/prevent-lab-data-loss.jpg') }}" alt="Prevent Raw Data Loss">
                     </div>
                 </div>
             </div>
@@ -296,28 +309,28 @@
     <!-- How We can Help - End -->
 
     <!-- Get Demo Section Start -->
-    <div class="qia-cta style1 bg7 pt-30 pb-30"
-        style="background: url({{ asset('storage/logo/' . get_option('get_demo_background_picture')) }});" alt="QIA">
+    <div class="qia-cta style1 bg7 pt-30 pb-30" style="background: url({{ asset('storage/qiss-lab/Banner-image-1.jpg') }});"
+        alt="QIA">
         <div class="container">
             <div class="cta-wrap">
                 <div class="row align-items-center">
                     <div class="col-lg-9 col-md-12 md-mb-30">
                         <div class="title-wrap">
-                            <h3 class="epx-title">
-                                Make Lab Managers Life Easier with QISS LAB
-                            </h3>
+                            <h2 class="epx-title" style="font-size: 30px!important;">
+                                Make Lab Manager's Life Easier with QISS LAB
+                            </h2>
                         </div>
-                        <span>
-                            Lab management software reduces paperwork and speeds progress by automating tasks, enabling
-                            digital documentation, providing real-time access, and streamlining reporting and compliance
-                            management.
-                        </span>
+                        <p class="m-0" style="font-size: 17px!important; font-weight: 400; color: #ffffff;">
+                            Laboratory management software reduces paperwork and speeds progress by automating tasks,
+                            enabling digital documentation, providing real-time access, and streamlining reporting and
+                            compliance management.
+                        </p>
                     </div>
                     <div class="col-lg-3 text-right col-md-12">
                         <div class="button-wrap">
-                            <a class="readon learn-more"
+                            <a class="readon btn-demo"
                                 {{ get_option('get_demo_open_another_tab') == 1 ? 'target="_blank"' : '' }}
-                                href="{{ get_option('get_demo_button_url') }}">{{ get_option('get_demo_button_text') }}</a>
+                                href="{{ get_option('get_demo_button_url') }}">Get A Free Demo</a>
                         </div>
                     </div>
                 </div>
@@ -335,76 +348,295 @@
                 </h2>
                 <div class="services-desc">
                     <p>
-                        A LIMS Software To Help You Manage A Laboratory
+                        A Software To Help You Manage A Laboratory
                     </p>
                 </div>
             </div>
             <div class="row">
-                @php
-                    $services = App\HomePageContent::get();
-                @endphp
-                @foreach ($services as $service)
-                    <div class="col-lg-4 col-md-4 mb-3">
-                        <div class="services-item">
-                            <div class="services-icon">
-                                <div class="image-part">
-                                    <a {{ $service->open_another_tab == 1 ? 'target="_blank"' : '' }}
-                                        href="{{ $service->button_url }}">
-                                        <img src="{{ asset('storage/home-page-content/' . $service->icon) }}"
-                                            alt="Icon Image">
-                                    </a>
-                                </div>
+                <div class="col-lg-4 col-md-4 mb-3">
+                    <div class="services-item">
+                        <div class="services-icon">
+                            <div class="image-part">
+                                <a href="#">
+                                    <img src="{{ asset('storage/qiss-lab/Data-Management.svg') }}" alt="Data Management"
+                                        style="width: 70px!important; height:70px!important;">
+                                </a>
                             </div>
-                            <div class="shape-part">
-                                <img class="move-y" src="{{ asset('img/shape.png') }}" alt="">
+                        </div>
+                        <div class="shape-part">
+                            <img class="move-y" src="{{ asset('img/shape.png') }}" alt="">
+                        </div>
+                        <div class="services-content">
+                            <div class="services-text">
+                                <h3 class="services-title">
+                                    Data Management
+                                </h3>
                             </div>
-                            <div class="services-content">
-                                <div class="services-text">
-                                    <h3 class="services-title">
-                                        <a {{ $service->open_another_tab == 1 ? 'target="_blank"' : '' }}
-                                            href="{{ $service->button_url }}">
-                                            {{ $service->header }}
-                                        </a>
-                                    </h3>
-                                </div>
-                                <div class="services-desc">
-                                    <p>
-                                        {{ $service->content }}
-                                    </p>
-                                </div>
+                            <div class="services-desc">
+                                <p>
+                                    You can organize, store, and retrieve lab data efficiently to ensure accurate analysis and
+                                    reporting.
+                                </p>
                             </div>
                         </div>
                     </div>
-                @endforeach
+                </div>
+
+                <div class="col-lg-4 col-md-4 mb-3">
+                    <div class="services-item">
+                        <div class="services-icon">
+                            <div class="image-part">
+                                <a href="#">
+                                    <img src="{{ asset('storage/qiss-lab/inventory-management.svg') }}"
+                                        alt="Inventory Management" style="width: 70px!important; height:70px!important;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="shape-part">
+                            <img class="move-y" src="{{ asset('img/shape.png') }}" alt="">
+                        </div>
+                        <div class="services-content">
+                            <div class="services-text">
+                                <h3 class="services-title">
+                                    Inventory Management
+                                </h3>
+                            </div>
+                            <div class="services-desc">
+                                <p>
+                                    You can track supplies, reagents, and equipment to prevent shortages and reduce waste
+                                    with QISS LAB software.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 mb-3">
+                    <div class="services-item">
+                        <div class="services-icon">
+                            <div class="image-part">
+                                <a href="#">
+                                    <img src="{{ asset('storage/qiss-lab/order.svg') }}" alt="Order & Invoicing"
+                                        style="width: 70px!important; height:70px!important;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="shape-part">
+                            <img class="move-y" src="{{ asset('img/shape.png') }}" alt="">
+                        </div>
+                        <div class="services-content">
+                            <div class="services-text">
+                                <h3 class="services-title">
+                                    Order & Invoicing
+                                </h3>
+                            </div>
+                            <div class="services-desc">
+                                <p>
+                                    Maintain financial efficiency in labs by tracking orders from suppliers and generating
+                                    invoices for services.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 mb-3">
+                    <div class="services-item">
+                        <div class="services-icon">
+                            <div class="image-part">
+                                <a href="#">
+                                    <img src="{{ asset('storage/qiss-lab/Inspection.svg') }}" alt="Inspection"
+                                        style="width: 70px!important; height:70px!important;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="shape-part">
+                            <img class="move-y" src="{{ asset('img/shape.png') }}" alt="">
+                        </div>
+                        <div class="services-content">
+                            <div class="services-text">
+                                <h3 class="services-title">
+                                    Inspection
+                                </h3>
+                            </div>
+                            <div class="services-desc">
+                                <p>
+                                    Assess equipment, procedures and practices to identify potential hazards and areas for
+                                    improvement.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 mb-3">
+                    <div class="services-item">
+                        <div class="services-icon">
+                            <div class="image-part">
+                                <a href="#">
+                                    <img src="{{ asset('storage/qiss-lab/sample.svg') }}" alt="Sample Management"
+                                        style="width: 70px!important; height:70px!important;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="shape-part">
+                            <img class="move-y" src="{{ asset('img/shape.png') }}" alt="">
+                        </div>
+                        <div class="services-content">
+                            <div class="services-text">
+                                <h3 class="services-title">
+                                    Sample Management
+                                </h3>
+                            </div>
+                            <div class="services-desc">
+                                <p>
+                                    Easily track, retain, and analyze samples with our software, ensuring proper
+                                    documentation during the research process.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 mb-3">
+                    <div class="services-item">
+                        <div class="services-icon">
+                            <div class="image-part">
+                                <a href="#">
+                                    <img src="{{ asset('storage/qiss-lab/Scheduling.svg') }}" alt="Scheduling"
+                                        style="width: 70px!important; height:70px!important;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="shape-part">
+                            <img class="move-y" src="{{ asset('img/shape.png') }}" alt="">
+                        </div>
+                        <div class="services-content">
+                            <div class="services-text">
+                                <h3 class="services-title">
+                                    Scheduling
+                                </h3>
+                            </div>
+                            <div class="services-desc">
+                                <p>
+                                    Efficiently manage lab schedules to ensure optimal resource allocation and minimizing
+                                    conflicts to improve productivity.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 mb-3">
+                    <div class="services-item">
+                        <div class="services-icon">
+                            <div class="image-part">
+                                <a href="#">
+                                    <img src="{{ asset('storage/qiss-lab/test.svg') }}" alt="Testing"
+                                        style="width: 70px!important; height:70px!important;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="shape-part">
+                            <img class="move-y" src="{{ asset('img/shape.png') }}" alt="">
+                        </div>
+                        <div class="services-content">
+                            <div class="services-text">
+                                <h3 class="services-title">
+                                    Testing
+                                </h3>
+                            </div>
+                            <div class="services-desc">
+                                <p>
+                                    QISS Lab streamlines testing processes, ensuring accuracy and efficiency in managing lab
+                                    tests and results.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 mb-3">
+                    <div class="services-item">
+                        <div class="services-icon">
+                            <div class="image-part">
+                                <a href="#">
+                                    <img src="{{ asset('storage/qiss-lab/Report.svg') }}" alt="Reporting"
+                                        style="width: 70px!important; height:70px!important;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="shape-part">
+                            <img class="move-y" src="{{ asset('img/shape.png') }}" alt="">
+                        </div>
+                        <div class="services-content">
+                            <div class="services-text">
+                                <h3 class="services-title">
+                                    Reporting
+                                </h3>
+                            </div>
+                            <div class="services-desc">
+                                <p>
+                                    Generate comprehensive reports with ease, allowing for quick insights and informed
+                                    decision-making.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 mb-3">
+                    <div class="services-item">
+                        <div class="services-icon">
+                            <div class="image-part">
+                                <a href="#">
+                                    <img src="{{ asset('storage/qiss-lab/Document-control.svg') }}"
+                                        alt="Document Control" style="width: 70px!important; height:70px!important;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="shape-part">
+                            <img class="move-y" src="{{ asset('img/shape.png') }}" alt="">
+                        </div>
+                        <div class="services-content">
+                            <div class="services-text">
+                                <h3 class="services-title">
+                                    Document Control
+                                </h3>
+                            </div>
+                            <div class="services-desc">
+                                <p>
+                                    Maintain organized, secure and easily accessible documents, ensuring compliance and
+                                    facilitating collaboration.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     {{-- SERVICES SECTION END --}}
 
     <!-- Get Demo Section Start -->
-    <div class="qia-cta style1 bg7 pt-30 pb-30"
-        style="background: url({{ asset('storage/logo/' . get_option('get_demo_background_picture')) }});"
+    <div class="qia-cta style1 bg7 pt-30 pb-30"style="background: url({{ asset('storage/qiss-lab/Banner-image-1.jpg') }});"
         alt="QIA">
         <div class="container">
             <div class="cta-wrap">
                 <div class="row align-items-center">
                     <div class="col-lg-9 col-md-12 md-mb-30">
                         <div class="title-wrap">
-                            <h3 class="epx-title">
-                                Make Lab Managers Life Easier with QISS LAB
-                            </h3>
+                            <h2 class="epx-title" style="font-size: 30px!important;">
+                                Would You Like To Know More About Our QISS LAB?
+                            </h2>
                         </div>
-                        <span>
-                            Lab management software reduces paperwork and speeds progress by automating tasks, enabling
-                            digital documentation, providing real-time access, and streamlining reporting and compliance
-                            management.
-                        </span>
+                        <p class="m-0" style="font-size: 17px!important; font-weight: 400;color: #ffffff;">
+                            Contact our team to learn more about our product and how it can help your laboratory staff.
+                        </p>
                     </div>
                     <div class="col-lg-3 text-right col-md-12">
                         <div class="button-wrap">
-                            <a class="readon learn-more"
-                                {{ get_option('get_demo_open_another_tab') == 1 ? 'target="_blank"' : '' }}
-                                href="{{ get_option('get_demo_button_url') }}">{{ get_option('get_demo_button_text') }}</a>
+                            <a class="readon btn-demo" {{ get_option('get_demo_open_another_tab') == 1 ? 'target="_blank"' : '' }} href="{{ get_option('get_demo_button_url') }}">Contact Our Team</a>
                         </div>
                     </div>
                 </div>
@@ -413,32 +645,74 @@
     </div>
     <!-- Get Demo Section End -->
 
-    <!-- Client Partner Section Start -->
+    <!-- INDUSTRY Section Start -->
     <div class="qia-partner style4 pb-20" style="background-color: #ffff;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 text-center pb-3">
-                    <h2 style="font-size: 23px !important;font-weight: bold; margin-top:0px;margin-bottom: 20px;">
-                        Our Clients
+                    <h2 style="font-size: 32px!important;font-weight: bold;" class="m-0 text-capitalize">
+                        QISS LAB for Your Industries
                     </h2>
+                    <p style="font-size: 18px!important;font-weight: bold;" class="m-0">A specialized software for your
+                        needs</p>
                 </div>
-                <div class="col-lg-12">
+                <div class="col-lg-12 mt-5">
                     <div class="qia-carousel owl-carousel" data-autoplay="true" data-loop="true" data-items="4"
                         data-smart-speed="1000" data-hoverpause="false" data-nav-speed="true"
                         data-autoplay-timeout="2500">
-                        @php
-                            $clientPartners = App\ClientPartner::get();
-                        @endphp
-                        @foreach ($clientPartners as $clientPartner)
-                            <div class="partner-item">
-                                <div class="logo-img">
-                                    <a href="javascript:;">
-                                        <img src="{{ asset('storage/home-page-content/' . $clientPartner->picture) }}"
-                                            alt="{{ $clientPartner->alt_tag }}">
-                                    </a>
-                                </div>
+                        <div class="partner-item">
+                            <div class="logo-img text-center">
+                                <a href="javascript:;" style="width: 175px;">
+                                    <img src="{{ asset('storage/qiss-lab/Chemical-Industry.svg') }}"
+                                        alt="Chemical Industry">
+                                    <span class="industry-title">
+                                        Chemical Industry
+                                    </span>
+                                </a>
                             </div>
-                        @endforeach
+                        </div>
+
+                        <div class="partner-item">
+                            <div class="logo-img text-center">
+                                <a href="javascript:;" style="width: 175px;">
+                                    <img src="{{ asset('storage/qiss-lab/Oil-Gas-Industry.svg') }}"
+                                        alt="Oil & Gas Industry">
+                                    <span class="industry-title">
+                                        Oil & Gas Industry
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="partner-item">
+                            <div class="logo-img text-center">
+                                <a href="javascript:;" style="width: 175px;">
+                                    <img src="{{ asset('storage/qiss-lab/Research-Industry.svg') }}"
+                                        alt="Research Industry">
+                                    <span class="industry-title">Research Industry</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="partner-item">
+                            <div class="logo-img text-center">
+                                <a href="javascript:;" style="width: 175px;">
+                                    <img src="{{ asset('storage/qiss-lab/Water-Industry.svg') }}"
+                                        alt="Water Industry">
+                                    <span class="industry-title">Water Industry</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="partner-item">
+                            <div class="logo-img text-center">
+                                <a href="javascript:;" style="width: 175px;">
+                                    <img src="{{ asset('storage/qiss-lab/Marine-Industry.svg') }}"
+                                        alt="Marine Industry">
+                                    <span class="industry-title">Marine Industry</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -452,19 +726,19 @@
             <div class="row align-items-center pt-50 pb-50">
                 <div class="col-lg-6 order-lg-1 pl-60 md-pl-15">
                     <div class="contact-wrap">
-                        <div class="sec-title mb-30">
-                            <h2 class="title pb-38">
+                        <div class="sec-title">
+                            <h2 class="title pb-3 m-0">
                                 Why Choose QISS LAB Software To Manage Your Laboratory?
                             </h2>
-                            <div class="desc pb-35">
-                                QISS LAB offers an easy-to-use platform designed to streamline laboratory management. With
-                                customizable reports, users can tailor data presentation to meet specific needs. The
-                                integrated approval system ensures compliance with industry standards, while web-based
-                                access allows for convenient management from any location. Users can easily attach photos
-                                for documentation, enhancing record accuracy. Additionally, QISS LAB seamlessly integrates
-                                with QISS QMS, providing a comprehensive solution for maintaining quality and compliance in
-                                laboratory operations.
-                            </div>
+                            <p class="desc pb-5 m-0" style="font-size: 16px;text-align:justify;">
+                                QISS LAB offers an easy-to-use platform designed to streamline laboratory workflow
+                                management. With customizable reports, users can tailor data presentation to meet specific
+                                needs. The integrated approval system ensures compliance with industry standards, while
+                                web-based access allows for convenient management from any location. Users can easily attach
+                                photos for documentation, improving record accuracy. Additionally, QISS LAB seamlessly
+                                integrates with QISS QMS, providing a comprehensive solution for maintaining quality and
+                                compliance in laboratory operations.
+                            </p>
                         </div>
                         <div class="btn-part">
                             <a class="readon learn-more"
@@ -475,8 +749,7 @@
                 </div>
                 <div class="col-lg-6 order-lg-2">
                     <div class="home8-about z-index-1">
-                        <img src="{{ asset('storage/logo/' . get_option('home_about_picture')) }}"
-                            alt="{{ get_option('home_about_alt_tag') }}">
+                        <img src="{{ asset('storage/qiss-lab/Why-Choose-QISS-LAB.jpg') }}" alt="Why Choose QISS LAB">
                     </div>
                 </div>
             </div>
@@ -489,7 +762,7 @@
         <div class="container">
             <div class="sec-title6 mb-50 text-center">
                 <span class="sub-text new-text">{{ get_option('testimonial_title') }}</span>
-                <h5 class="title">{{ get_option('testimonial_header') }}</h5>
+                <h2 class="title mt-2 mb-0">{{ get_option('testimonial_header') }}</h2>
             </div>
             <div class="row">
                 <div class="col-xl-8 col-lg-8 col-md-12">
@@ -565,19 +838,19 @@
     <div class="qia-about pt-5 pb-120 bg13  md-pt-80 md-pb-80">
         <div class="container">
             <div class="row align-items-center pt-50 pb-50">
-                <div class="col-lg-6 order-lg-2 pl-60 md-pl-15">
+                <div class="col-lg-6 order-lg-2">
                     <div class="contact-wrap">
-                        <div class="sec-title mb-30">
-                            <h2 class="title pb-38">
-                                Why Choose QISS LAB Software To Manage Your Laboratory?
+                        <div class="sec-title pb-5">
+                            <h2 class="title pb-3">
+                                About QIA
                             </h2>
-                            <div class="desc pb-35">
-                                Quality Institute of America is a software company, based in Houston, Texas. We are
-                                dedicated to improving our client’s profitability through effective management systems. Our
-                                flagship product is QISS QMS software which automates Quality Management Systems by
-                                streamlining processes for greater efficiency. We are excited to introduce QISS LAB, our
-                                latest software designed to further support labs in optimizing their operations.
-                            </div>
+                            <p class="desc m-0">
+                                Quality Institute of America is a software company based in Houston, Texas. We are dedicated
+                                to improving our client’s profitability through effective management systems. Our flagship
+                                product is QISS QMS software which automates Quality Management Systems by streamlining
+                                processes for greater efficiency. We are excited to introduce QISS LAB, our latest software
+                                designed to further support labs in optimizing their operations.
+                            </p>
                         </div>
                         <div class="btn-part">
                             <a class="readon learn-more"
@@ -588,8 +861,7 @@
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="home8-about z-index-1">
-                        <img src="{{ asset('storage/logo/' . get_option('home_about_picture')) }}"
-                            alt="{{ get_option('home_about_alt_tag') }}">
+                        <img src="{{ asset('storage/qiss-lab/6_11zon.jpg') }}" alt="QISS LAB">
                     </div>
                 </div>
             </div>
@@ -597,7 +869,7 @@
     </div>
     <!-- About Us - End -->
 
-    <!-- Testimonial Section -->
+    <!-- FAQ Section -->
     <div class="qia-testimonial style8 pt-30 pb-50 md-pt-80 md-pb-80">
         <div class="container">
             <div class="sec-title6 mb-50 text-center">
@@ -605,56 +877,65 @@
             </div>
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12">
-                    <div class="accordion" id="accordionExample">
-                        <div class="card">
-                          <div class="card-header" id="headingOne">
-                            <h2 class="mb-0">
-                              <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Collapsible Group Item #1
-                              </button>
-                            </h2>
-                          </div>
-                      
-                          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                            <div class="card-body">
-                              Some placeholder content for the first accordion panel. This panel is shown by default, thanks to the <code>.show</code> class.
+                    <div id="accordion">
+                        <div class="card mb-2">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="m-0">
+                                    <button class="btn btn-link accdordion-title" data-toggle="collapse" data-target="#collapseOne"
+                                        aria-expanded="true" aria-controls="collapseOne">
+                                        What is lab management software​?
+                                    </button>
+                                </h5>
                             </div>
-                          </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    It is a software that can streamline lab workflows by organizing data, tracking
+                                    inventory, and managing samples efficiently.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-2">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="m-0">
+                                    <button class="btn btn-link collapsed accdordion-title" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Why should I use it?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    You should use it to automate lab workflows and reduce miscommunications between field
+                                    staff and lab technicians.
+                                </div>
+                            </div>
                         </div>
                         <div class="card">
-                          <div class="card-header" id="headingTwo">
-                            <h2 class="mb-0">
-                              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Collapsible Group Item #2
-                              </button>
-                            </h2>
-                          </div>
-                          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                            <div class="card-body">
-                              Some placeholder content for the second accordion panel. This panel is hidden by default.
+                            <div class="card-header" id="headingThree">
+                                <h5 class="m-0">
+                                    <button class="btn btn-link collapsed accdordion-title" data-toggle="collapse"
+                                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        How can it help lab managers?
+                                    </button>
+                                </h5>
                             </div>
-                          </div>
-                        </div>
-                        <div class="card">
-                          <div class="card-header" id="headingThree">
-                            <h2 class="mb-0">
-                              <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Collapsible Group Item #3
-                              </button>
-                            </h2>
-                          </div>
-                          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                            <div class="card-body">
-                              And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    It will allow lab managers to assign a task, see the results and approve any task
+                                    remotely.
+                                </div>
                             </div>
-                          </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Testimonial Section -->
+    <!-- FAQ Section -->
 
     <!-- Blog Section Start -->
     <div id="qia-blog" class="qia-blog pt-110 pb-120 md-pt-75 md-pb-80">
@@ -675,9 +956,7 @@
                 data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="3"
                 data-md-device-nav="false" data-md-device-dots="false">
                 @php
-                    $blogs = App\Blog::select('slug', 'cover_photo', 'created_at', 'category_id', 'author_id', 'header')
-                        ->get()
-                        ->random(4);
+                    $blogs = App\Blog::select('slug', 'cover_photo', 'created_at', 'category_id', 'author_id', 'header')->whereIn('id', [75,83,84])->get();
                 @endphp
                 @foreach ($blogs as $blog)
                     <div class="blog-item">
