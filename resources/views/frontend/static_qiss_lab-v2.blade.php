@@ -92,39 +92,148 @@
             border-radius: 30px 30px 30px 30px;
         }
 
-        .btn-demo:hover {
-            background: #a50031;
+        .btn-demo:hover, .see-more-btn .quote-btn:hover {
+            background: #CE1F41;
             color: #E7F1FB;
-            box-shadow: 0 0 5px 0 #a50031;
+            box-shadow: 0 0 5px 0 #CE1F41;
+            border: none;
         }
-        
-        .accdordion-title{
+
+        .accdordion-title {
             font-size: 18px;
             font-weight: 500;
-            text-decoration: none!important;
+            text-decoration: none !important;
             color: #181818;
         }
-        .industry-title{
+
+        .industry-title {
             font-size: 18px;
             font-weight: 500;
             color: #181818;
             margin-top: 15px;
             display: block;
         }
+
+        .collapsible-link {
+            width: 100%;
+            position: relative;
+            text-align: left;
+        }
+
+        .collapsible-link::before {
+            content: "\f107";
+            position: absolute;
+            top: 50%;
+            right: 1.2rem;
+            transform: translateY(-50%);
+            display: block;
+            font-family: "FontAwesome";
+            font-size: 1.1rem;
+        }
+
+        .collapsible-link[aria-expanded="true"]::before {
+            content: "\f106";
+        }
+
+        .btn-link:hover {
+            color: #002246 !important;
+            text-decoration: none !important;
+            background: #E7F1FB;
+        }
+
+        .btn-link:focus {
+            color: #002246 !important;
+            text-decoration: none !important;
+            background: #E7F1FB;
+        }
+
+        @media (max-width: 768px) {
+            .contact-wrap .desc {
+                margin-bottom: 20px !important;
+            }
+
+            .qia-about .learn-more {
+                margin-bottom: 20px !important;
+            }
+        }
+
+        .qia-industries .industries-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .industries-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+
+        .industry-card {
+            width: calc(20% - 10px); /* 20% width for 5 items per row */
+            margin-bottom: 20px;
+        }
+
+        .logo-img img {
+            display: block;
+            margin: auto;
+        }
+
+        .see-more-btn button {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        /* Loading spinner styles */
+        .loading-spinner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            margin-top: 0px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -180%);
+        }
+
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border-left-color: #2A338F;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .see-more-btn .quote-btn{
+            transition: 0.3s all ease-in-out;
+            background: #2A338F;
+            border-radius: 100px;
+            color: #fff;
+            margin-top: 25px;
+            border: none;
+        }
     </style>
 
     <!-- Banner Section Start -->
     <div class="qia-banner main-home pt-100 pb-100  md-pt-80 md-pb-80"
-        style="background: url({{ asset('storage/qiss-lab/hero-bg.jpg') }});" alt="QIA">
+        style="background: url({{ asset('storage/qiss-lab/Hero-section-Background.jpg') }});" alt="QIA">
         <div class="container">
             <div class="row">
-                <div class="col-lg-7 col-md-12 pr-30 md-mb-70 md-pr-15">
+                <div class="col-lg-6 col-md-12 pr-30 md-mb-70 md-pr-15 d-flex align-items-center">
                     <div class="content-wrap">
-                        <h1 class="it-title" style="font-size: 44px!important;">
+                        <h1 class="it-title" style="font-size: 36px!important;">
                             QISS LAB - A Laboratory Workflow Management Software
                         </h1>
                         <div class="description">
-                            <p class="desc" style="text-align: justify">
+                            <p class="desc" style="text-align: justify;">
                                 QISS LAB is a comprehensive lab workflow management software designed to address common
                                 challenges in laboratory operations. Many labs struggle with disorganized data, inefficient
                                 resource allocation, and compliance issues, leading to wasted time and increased costs. Our
@@ -137,45 +246,48 @@
                     </div>
                 </div>
 
-                <div class="col-lg-5 col-md-12 pl-30 md-pl-15 align-middle">
-                    <img src="{{ asset('storage/qiss-lab/lab-manager-is-talking-with-chemist-about-the-report.jpg') }}" alt="Automate Your Lab Management System">
+                <div class="col-lg-6 col-md-12 pl-30 md-pl-15 align-middle">
+                    <img src="{{ asset('storage/qiss-lab/lab-manager-is-talking-with-chemist-about-the-report.jpg') }}"
+                        alt="Automate Your Lab Management System">
                 </div>
             </div>
         </div>
     </div>
     <!-- Banner Section End -->
-
-    <!-- Client Partner Section Start -->
+    
+    <!-- INDUSTRY Section Start -->
     <div class="qia-partner style4 pb-20" style="background-color: #ffff;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 text-center pb-3">
-                    <h2 style="font-size: 32px!important;font-weight: bold; margin-top:0px;margin-bottom: 20px;">
-                        Our Clients
+                    <h2 style="font-size: 32px!important;font-weight: bold;" class="m-0 text-capitalize">
+                        QISS LAB for Your Industries
                     </h2>
+                    <p style="font-size: 18px!important;font-weight: bold;" class="m-0">A specialized software for your
+                        needs</p>
                 </div>
-                <div class="col-lg-12">
-                    <div class="qia-carousel owl-carousel" data-autoplay="true" data-loop="true" data-items="4"
-                        data-smart-speed="1000" data-hoverpause="false" data-nav-speed="true" data-autoplay-timeout="2500">
-                        @php
-                            $clientPartners = App\ClientPartner::get();
-                        @endphp
-                        @foreach ($clientPartners as $clientPartner)
-                            <div class="partner-item">
-                                <div class="logo-img">
-                                    <a href="javascript:;">
-                                        <img src="{{ asset('storage/home-page-content/' . $clientPartner->picture) }}"
-                                            alt="{{ $clientPartner->alt_tag }}">
-                                    </a>
-                                </div>
-                            </div>
-                        @endforeach
+                <div class="col-lg-12 mt-5">
+                    <div class="qia-industries">
+                        <div class="industries-grid">
+                            <!-- Industry Items will go here -->
+                        </div>
+
+                        <!-- See More Button -->
+                        <div class="see-more-btn text-center mt-4">
+                            <button class="quote-btn" onclick="toggleIndustries()">See More</button>
+                        </div>
+
+                        <!-- Loading animation -->
+                        <div class="loading-spinner" style="display: none;">
+                            <div class="spinner"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Client Partner Section End -->
+    <!-- INDUSTRY Section End -->
+
 
     <!-- How We can Help - Start -->
     <div class="qia-about pb-120 md-pt-80 md-pb-80" style="padding-top: 40px;background: #E7F1FB">
@@ -192,7 +304,7 @@
                 <div class="col-lg-6 order-lg-1">
                     <div class="contact-wrap">
                         <div class="sec-title mb-0">
-                            <h3 class="title pb-5">
+                            <h3 class="title pb-3">
                                 Automate Your Lab Management System
                             </h3>
                             <p class="desc pb-0 m-0" style="text-align: justify">
@@ -220,7 +332,7 @@
                 <div class="col-lg-6 order-lg-2">
                     <div class="contact-wrap">
                         <div class="sec-title mb-0">
-                            <h3 class="title pb-5">
+                            <h3 class="title pb-3">
                                 Increase Productivity & Save Time
                             </h3>
                             <p class="desc pb-0 m-0" style="text-align: justify">
@@ -250,7 +362,7 @@
                 <div class="col-lg-6 order-lg-1">
                     <div class="contact-wrap">
                         <div class="sec-title mb-0">
-                            <h3 class="title pb-5">
+                            <h3 class="title pb-3">
                                 Reducing Risk of Errors
                             </h3>
                             <p class="desc pb-0 m-0" style="text-align: justify">
@@ -279,7 +391,7 @@
                 <div class="col-lg-6 order-lg-2">
                     <div class="contact-wrap">
                         <div class="sec-title mb-0">
-                            <h3 class="title pb-5">
+                            <h3 class="title pb-3">
                                 Prevent Raw Data Loss
                             </h3>
                             <p class="desc pb-0 m-0" style="text-align: justify">
@@ -374,7 +486,8 @@
                             </div>
                             <div class="services-desc">
                                 <p>
-                                    You can organize, store, and retrieve lab data efficiently to ensure accurate analysis and
+                                    You can organize, store, and retrieve lab data efficiently to ensure accurate analysis
+                                    and
                                     reporting.
                                 </p>
                             </div>
@@ -636,7 +749,9 @@
                     </div>
                     <div class="col-lg-3 text-right col-md-12">
                         <div class="button-wrap">
-                            <a class="readon btn-demo" {{ get_option('get_demo_open_another_tab') == 1 ? 'target="_blank"' : '' }} href="{{ get_option('get_demo_button_url') }}">Contact Our Team</a>
+                            <a class="readon btn-demo"
+                                {{ get_option('get_demo_open_another_tab') == 1 ? 'target="_blank"' : '' }}
+                                href="{{ get_option('get_demo_button_url') }}">Contact Our Team</a>
                         </div>
                     </div>
                 </div>
@@ -645,92 +760,17 @@
     </div>
     <!-- Get Demo Section End -->
 
-    <!-- INDUSTRY Section Start -->
-    <div class="qia-partner style4 pb-20" style="background-color: #ffff;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 text-center pb-3">
-                    <h2 style="font-size: 32px!important;font-weight: bold;" class="m-0 text-capitalize">
-                        QISS LAB for Your Industries
-                    </h2>
-                    <p style="font-size: 18px!important;font-weight: bold;" class="m-0">A specialized software for your
-                        needs</p>
-                </div>
-                <div class="col-lg-12 mt-5">
-                    <div class="qia-carousel owl-carousel" data-autoplay="true" data-loop="true" data-items="4"
-                        data-smart-speed="1000" data-hoverpause="false" data-nav-speed="true"
-                        data-autoplay-timeout="2500">
-                        <div class="partner-item">
-                            <div class="logo-img text-center">
-                                <a href="javascript:;" style="width: 175px;">
-                                    <img src="{{ asset('storage/qiss-lab/Chemical-Industry.svg') }}"
-                                        alt="Chemical Industry">
-                                    <span class="industry-title">
-                                        Chemical Industry
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="partner-item">
-                            <div class="logo-img text-center">
-                                <a href="javascript:;" style="width: 175px;">
-                                    <img src="{{ asset('storage/qiss-lab/Oil-Gas-Industry.svg') }}"
-                                        alt="Oil & Gas Industry">
-                                    <span class="industry-title">
-                                        Oil & Gas Industry
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="partner-item">
-                            <div class="logo-img text-center">
-                                <a href="javascript:;" style="width: 175px;">
-                                    <img src="{{ asset('storage/qiss-lab/Research-Industry.svg') }}"
-                                        alt="Research Industry">
-                                    <span class="industry-title">Research Industry</span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="partner-item">
-                            <div class="logo-img text-center">
-                                <a href="javascript:;" style="width: 175px;">
-                                    <img src="{{ asset('storage/qiss-lab/Water-Industry.svg') }}"
-                                        alt="Water Industry">
-                                    <span class="industry-title">Water Industry</span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="partner-item">
-                            <div class="logo-img text-center">
-                                <a href="javascript:;" style="width: 175px;">
-                                    <img src="{{ asset('storage/qiss-lab/Marine-Industry.svg') }}"
-                                        alt="Marine Industry">
-                                    <span class="industry-title">Marine Industry</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Client Partner Section End -->
-
     <!-- How We can Help - Start -->
     <div class="qia-about pt-5 pb-120 bg13  md-pt-80 md-pb-80">
         <div class="container">
             <div class="row align-items-center pt-50 pb-50">
-                <div class="col-lg-6 order-lg-1 pl-60 md-pl-15">
+                <div class="col-lg-6 order-lg-1 md-pl-15">
                     <div class="contact-wrap">
                         <div class="sec-title">
                             <h2 class="title pb-3 m-0">
                                 Why Choose QISS LAB Software To Manage Your Laboratory?
                             </h2>
-                            <p class="desc pb-5 m-0" style="font-size: 16px;text-align:justify;">
+                            <p class="desc pb-2 m-0" style="font-size: 16px;text-align:justify;">
                                 QISS LAB offers an easy-to-use platform designed to streamline laboratory workflow
                                 management. With customizable reports, users can tailor data presentation to meet specific
                                 needs. The integrated approval system ensures compliance with industry standards, while
@@ -743,19 +783,53 @@
                         <div class="btn-part">
                             <a class="readon learn-more"
                                 {{ get_option('home_about_btn_open_another_tab') == 1 ? 'target="_blank"' : '' }}
-                                href="{{ get_option('home_about_btn_url') }}">{{ get_option('home_about_btn_text') }}</a>
+                                href="{{ get_option('home_about_btn_url') }}">
+                                {{ get_option('home_about_btn_text') }}
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-2">
                     <div class="home8-about z-index-1">
-                        <img src="{{ asset('storage/qiss-lab/Why-Choose-QISS-LAB.jpg') }}" alt="Why Choose QISS LAB">
+                        <img src="{{ asset('storage/qiss-lab/Why-choose-QISS-LAB.png') }}" alt="Why Choose QISS LAB">
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- How We can Help - End -->
+    
+    <!-- Client Partner Section Start -->
+    <div class="qia-partner style4 pb-20" style="background-color: #ffff;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 text-center pb-3">
+                    <h2 style="font-size: 32px!important;font-weight: bold; margin-top:0px;margin-bottom: 20px;">
+                        Our Clients
+                    </h2>
+                </div>
+                <div class="col-lg-12">
+                    <div class="qia-carousel owl-carousel" data-autoplay="true" data-loop="true" data-items="4" data-rtl="true"
+                        data-smart-speed="1000" data-hoverpause="false" data-nav-speed="true" data-autoplay-timeout="2500">
+                        @php
+                            $clientPartners = App\ClientPartner::get();
+                        @endphp
+                        @foreach ($clientPartners as $clientPartner)
+                            <div class="partner-item">
+                                <div class="logo-img">
+                                    <a href="javascript:;">
+                                        <img src="{{ asset('storage/home-page-content/' . $clientPartner->picture) }}"
+                                            alt="{{ $clientPartner->alt_tag }}">
+                                    </a>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Client Partner Section End -->
 
     <!-- Testimonial Section -->
     <div class="qia-testimonial style8 gray-color pt-30 pb-50 md-pt-80 md-pb-80">
@@ -765,14 +839,14 @@
                 <h2 class="title mt-2 mb-0">{{ get_option('testimonial_header') }}</h2>
             </div>
             <div class="row">
-                <div class="col-xl-8 col-lg-8 col-md-12">
+                <div class="col-xl-12 col-lg-12 col-md-12">
                     <div class="testimonial-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30"
                         data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800"
                         data-dots="false" data-nav="false" data-nav-speed="false" data-center-mode="false"
                         data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false"
                         data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="false"
-                        data-ipad-device2="2" data-ipad-device-nav2="false" data-ipad-device-dots2="false"
-                        data-md-device="2" data-md-device-nav="false" data-md-device-dots="true">
+                        data-ipad-device2="3" data-ipad-device-nav2="false" data-ipad-device-dots2="false"
+                        data-md-device="3" data-md-device-nav="false" data-md-device-dots="true">
 
                         @php
                             $testimonials = App\Testimonial::get();
@@ -810,7 +884,7 @@
                         @endforeach
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-12">
+                {{-- <div class="col-xl-4 col-lg-4 col-md-12">
                     <div class="qia-contact mod1">
                         <div class="contact-wrap" style="padding: 0;;" id="testimonial_content">
                             <img src="storage/home-page-content/EeOtq5mPasiYvpjBryAVxFL5paxVjnFQOgoS38g5.png"
@@ -828,7 +902,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
@@ -840,7 +914,7 @@
             <div class="row align-items-center pt-50 pb-50">
                 <div class="col-lg-6 order-lg-2">
                     <div class="contact-wrap">
-                        <div class="sec-title pb-5">
+                        <div class="sec-title pb-3">
                             <h2 class="title pb-3">
                                 About QIA
                             </h2>
@@ -877,59 +951,74 @@
             </div>
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12">
-                    <div id="accordion">
-                        <div class="card mb-2">
-                            <div class="card-header" id="headingOne">
-                                <h5 class="m-0">
-                                    <button class="btn btn-link accdordion-title" data-toggle="collapse" data-target="#collapseOne"
-                                        aria-expanded="true" aria-controls="collapseOne">
-                                        What is lab management software​?
+                    <div id="accordionExample" class="accordion">
+                        <!-- Accordion item 1 -->
+                        <div class="card">
+                            <div id="headingOne" class="bg-white shadow-sm border-0">
+                                <h2 class="m-0" style="line-height: 0;">
+                                    <button type="button" data-toggle="collapse" data-target="#collapseOne"
+                                        aria-expanded="true" aria-controls="collapseOne" style="padding: 25px;"
+                                        class="card-header btn btn-link text-dark font-weight-bold text-uppercase collapsible-link">
+                                        What is lab management software?
                                     </button>
-                                </h5>
+                                </h2>
                             </div>
-
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                data-parent="#accordion">
-                                <div class="card-body">
-                                    It is a software that can streamline lab workflows by organizing data, tracking
-                                    inventory, and managing samples efficiently.
+                            <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample"
+                                class="collapse show">
+                                <div class="card-body" style="padding: 25px;">
+                                    <p class="font-weight-light m-0" style="font-size: 16px;">
+                                        It is a software that can streamline lab workflows by organizing data, tracking
+                                        inventory, and managing samples efficiently.
+                                    </p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card mb-2">
-                            <div class="card-header" id="headingTwo">
-                                <h5 class="m-0">
-                                    <button class="btn btn-link collapsed accdordion-title" data-toggle="collapse"
-                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        </div><!-- End -->
+
+                        <!-- Accordion item 2 -->
+                        <div class="card">
+                            <div id="headingTwo" class="bg-white shadow-sm border-0">
+                                <h2 class="m-0" style="line-height: 0;">
+                                    <button type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                        aria-expanded="false" aria-controls="collapseTwo" style="padding: 25px;"
+                                        class="card-header btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">
                                         Why should I use it?
                                     </button>
-                                </h5>
+                                </h2>
                             </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                data-parent="#accordion">
-                                <div class="card-body">
-                                    You should use it to automate lab workflows and reduce miscommunications between field
-                                    staff and lab technicians.
+                            <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample"
+                                class="collapse">
+                                <div class="card-body" style="padding: 25px;">
+                                    <p class="font-weight-light m-0" style="font-size: 16px;">
+                                        You should use it to automate lab workflows and reduce miscommunications between
+                                        field
+                                        staff and lab technicians.
+                                    </p>
                                 </div>
                             </div>
-                        </div>
+                        </div><!-- End -->
+
+                        <!-- Accordion item 3 -->
                         <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <h5 class="m-0">
-                                    <button class="btn btn-link collapsed accdordion-title" data-toggle="collapse"
-                                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <div id="headingThree" class="bg-white shadow-sm border-0">
+                                <h2 class="m-0" style="line-height: 0;">
+                                    <button type="button" data-toggle="collapse" data-target="#collapseThree"
+                                        aria-expanded="false" aria-controls="collapseThree" style="padding: 25px;"
+                                        class="card-header btn btn-link collapsed text-dark font-weight-bold text-uppercase collapsible-link">
                                         How can it help lab managers?
                                     </button>
-                                </h5>
+                                </h2>
                             </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                data-parent="#accordion">
-                                <div class="card-body">
-                                    It will allow lab managers to assign a task, see the results and approve any task
-                                    remotely.
+                            <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample"
+                                class="collapse">
+                                <div class="card-body" style="padding: 25px;">
+                                    <p class="font-weight-light m-0" style="font-size: 16px;">
+                                        It will allow lab managers to assign a task, see the results and approve any task
+                                        remotely.
+                                    </p>
                                 </div>
                             </div>
-                        </div>
+                        </div><!-- End -->
+
                     </div>
                 </div>
             </div>
@@ -956,7 +1045,9 @@
                 data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="3"
                 data-md-device-nav="false" data-md-device-dots="false">
                 @php
-                    $blogs = App\Blog::select('slug', 'cover_photo', 'created_at', 'category_id', 'author_id', 'header')->whereIn('id', [75,83,84])->get();
+                    $blogs = App\Blog::select('slug', 'cover_photo', 'created_at', 'category_id', 'author_id', 'header')
+                        ->whereIn('id', [75, 83, 84])
+                        ->get();
                 @endphp
                 @foreach ($blogs as $blog)
                     <div class="blog-item">
@@ -1015,6 +1106,99 @@
         </div>
     </div>
 
+    <script>
+        let isShowingMore = false; // Initial state: showing only 4 industries
+
+        function toggleIndustries() {
+            const industriesGrid = document.querySelector('.industries-grid');
+            const button = document.querySelector('.see-more-btn button');
+            const spinner = document.querySelector('.loading-spinner');
+            
+            // Industry items
+            const industries = [
+                {
+                    title: "Chemical Industry",
+                    img: "{{ asset('storage/qiss-lab/Chemical-Industry.svg') }}"
+                },
+                {
+                    title: "Oil & Gas Industry",
+                    img: "{{ asset('storage/qiss-lab/Oil-Gas-Industry.svg') }}"
+                },
+                {
+                    title: "Marine Industry",
+                    img: "{{ asset('storage/qiss-lab/Marine-Industry.svg') }}"
+                },
+                {
+                    title: "Water Industry",
+                    img: "{{ asset('storage/qiss-lab/Water-Industry.svg') }}"
+                },
+                {
+                    title: "Research Industry",
+                    img: "{{ asset('storage/qiss-lab/Research-Industry.svg') }}"
+                },
+                // Add more industries as needed
+            ];
+
+            const initialVisibleCount = 4;
+
+            // Show loading spinner
+            spinner.style.display = 'flex';
+
+            setTimeout(() => {
+                spinner.style.display = 'none'; // Hide loading spinner
+
+                // Clear any existing industries
+                industriesGrid.innerHTML = '';
+
+                if (isShowingMore) {
+                    // Show all industries when "See Less" is clicked
+                    industries.forEach(industry => {
+                        let industryElement = document.createElement('div');
+                        industryElement.classList.add('industry-card');
+
+                        // Populate industry data
+                        industryElement.innerHTML = `
+                            <div class="logo-img text-center">
+                                <a href="javascript:;">
+                                    <img src="${industry.img}" style="width: 100px; margin: auto;" alt="${industry.title}">
+                                    <span class="industry-title">${industry.title}</span>
+                                </a>
+                            </div>
+                        `;
+                        industriesGrid.appendChild(industryElement);
+                    });
+                    button.innerText = 'See Less';
+                } else {
+                    // Show only the first 4 industries initially
+                    industries.slice(0, initialVisibleCount).forEach(industry => {
+                        let industryElement = document.createElement('div');
+                        industryElement.classList.add('industry-card');
+
+                        // Populate industry data
+                        industryElement.innerHTML = `
+                            <div class="logo-img text-center">
+                                <a href="javascript:;">
+                                    <img src="${industry.img}" style="width: 100px; margin: auto;" alt="${industry.title}">
+                                    <span class="industry-title">${industry.title}</span>
+                                </a>
+                            </div>
+                        `;
+                        industriesGrid.appendChild(industryElement);
+                    });
+                    button.innerText = 'See More';
+                }
+
+                // Toggle the state
+                isShowingMore = !isShowingMore;
+
+            }, 500); // Delay for loading effect
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            toggleIndustries(); // Call the function when the DOM is ready
+        });
+    </script>
+
 @stop
 
 @push('scripts')
@@ -1026,207 +1210,4 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="{{ asset('/css/parsley.css') }}">
     <script src="{{ asset('js/parsley.min.js') }}"></script>
-    <script>
-        $(document).on('click', '.event-category', function() {
-            let id = $(this).data('id');
-            let url = '{{ URL::to('get-event-category') }}'
-            $('.event-category').removeClass('event-active');
-            $(this).addClass('event-active');
-            $.ajax({
-                type: 'GET',
-                url: url,
-                data: {
-                    id: id
-                },
-                dataType: 'HTML',
-                cache: false,
-                success: function(html) {
-                    $('#trainings_details_area').html(html);
-                }
-            })
-        });
-
-        const validateEmail = (email) => {
-            return String(email)
-                .toLowerCase()
-                .match(
-                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-                );
-        };
-
-        $(document).on('keyup', '#get_demo_email', function() {
-            let value = $(this).val();
-            if (validateEmail(value)) {
-                $('#get_demo_content_box').fadeIn();
-                $('#get_demo_request_one').hide();
-                animateWidth($('#get_demo_form_area'), 480, 200);
-            } else {
-                $('#get_demo_content_box').fadeOut();
-                $('#get_demo_request_one').fadeIn();
-            }
-        });
-
-        function animateWidth(element, newWidth, duration) {
-            const startWidth = $(element).width();
-            const widthChange = newWidth - startWidth;
-            const steps = duration / 10; // Update every 10ms
-            const stepSize = widthChange / steps;
-            let currentStep = 0;
-
-            const interval = setInterval(function() {
-                currentStep++;
-                const newWidth = startWidth + stepSize * currentStep;
-                $(element).css('width', newWidth + 'px');
-
-                if (currentStep >= steps) {
-                    clearInterval(interval);
-                    $(element).css('width', newWidth + 'px'); // Ensure exact final width
-                }
-            }, 10); // Update every 10ms
-        }
-
-        $(document).on('keyup', '#get_demo_content', function() {
-            let value = $(this).val();
-            if (value.trim() != '') {
-                $('#get_demo_request').fadeIn();
-            } else {
-                $('#get_demo_request').fadeOut();
-            }
-        })
-
-        $(document).on('click', '.book_event', function() {
-            let url = $(this).data("url");
-            $.ajax({
-                type: 'GET',
-                url: url,
-                dataType: 'HTML',
-                cache: false,
-                success: function(html) {
-                    $('#book_modal_remote').modal('show');
-                    $('#book_remote_modal_content').html(html);
-                    _modalFormValidation();
-                }
-            })
-        })
-
-        $(document).on('click', '.content_management', function() {
-            let url = $(this).data("url");
-            $.ajax({
-                type: 'GET',
-                url: url,
-                dataType: 'HTML',
-                cache: false,
-                success: function(html) {
-                    $('#modal_remote').modal('show');
-                    $('#remote_modal_content').html(html);
-                }
-            })
-        })
-
-        document.addEventListener('click', function(e) {
-            if (e.target.className === 'modal') {} else {
-                $('#remote_modal_content').html("");
-            }
-        }, false);
-
-
-        $(document).on('click', '.solution_content', function() {
-            let id = $(this).data('id');
-            $.ajax({
-                type: 'GET',
-                url: '{{ route('get_solution_details') }}',
-                data: {
-                    id: id
-                },
-                dataType: 'HTML',
-                cache: false,
-                success: function(html) {
-                    $('#solution_content').html(html);
-                }
-            })
-        })
-
-        var _modalFormValidation = function() {
-            if ($('#content_form').length > 0) {
-                $('#content_form').parsley().on('field:validated', function() {
-                    var ok = $('.parsley-error').length === 0;
-                    $('.bs-callout-info').toggleClass('hidden', !ok);
-                    $('.bs-callout-warning').toggleClass('hidden', ok);
-                });
-            }
-            $('#content_form').on('submit', function(e) {
-                e.preventDefault();
-                $('#submit').hide();
-                $('#submiting').show();
-                $(".ajax_error").remove();
-                var submit_url = $('#content_form').attr('action');
-                //Start Ajax
-                var formData = new FormData($("#content_form")[0]);
-                $.ajax({
-                    url: submit_url,
-                    type: 'POST',
-                    data: formData,
-                    contentType: false, // The content type used when sending data to the server.
-                    cache: false, // To unable request pages to be cached
-                    processData: false,
-                    dataType: 'JSON',
-                    success: function(data) {
-                        if (data.status == 'danger') {
-                            toastr.error(data.message);
-
-                        } else {
-                            toastr.success(data.message)
-                            $('#submit').show();
-                            $('#submiting').hide();
-                            $('#book_modal_remote').modal('toggle');
-
-                            setTimeout(() => {
-                                window.location.href = "";
-                            }, 2500);
-                        }
-                    },
-                    error: function(data) {
-                        var jsonValue = data.responseJSON;
-                        const errors = jsonValue.errors;
-                        if (errors) {
-                            var i = 0;
-                            $.each(errors, function(key, value) {
-                                const first_item = Object.keys(errors)[i];
-                                const message = errors[first_item][0];
-                                if ($('#' + first_item).length > 0) {
-                                    $('#' + first_item).parsley().removeError('required', {
-                                        updateClass: true
-                                    });
-                                    $('#' + first_item).parsley().addError('required', {
-                                        message: value,
-                                        updateClass: true
-                                    });
-                                }
-
-                                // $('#' + first_item).after('<div class="ajax_error" style="color:red">' + value + '</div');
-                                new PNotify({
-                                    width: '30%',
-                                    title: jsUcfirst(first_item) + ' Error!!',
-                                    text: value,
-                                    type: 'error',
-                                    addclass: 'alert alert-danger alert-styled-left',
-                                });
-                                i++;
-                            });
-                        } else {
-                            new PNotify({
-                                width: '30%',
-                                title: 'Something Wrong!',
-                                text: jsonValue.message,
-                                type: 'error',
-                                addclass: 'alert alert-danger alert-styled-left',
-                            });
-                        }
-                        $('#submit').show();
-                        $('#submiting').hide();
-                    }
-                });
-            });
-        };
-    </script>
 @endpush
