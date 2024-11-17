@@ -5,12 +5,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="referrer" content="origin">
-        <title>{{ $meta->title }}</title>
+        <title>{{ $meta->meta_title ?? $meta->title }}</title>
         <meta name="description" content="{{ $meta->meta_description }}">
         <link rel="canonical" href="{{ Request::url() }}" />
         <!--<link rel=alternate href="https://www.qi-a.com" hreflang=en-US />-->
         <link rel="icon" type="image/png" href="{{ asset('storage/logo/'. get_option('favicon')) }}">
-        @if(Route::currentRouteName() === 'qiss-lab-v2')
+        @if(strpos(Route::currentRouteName(), '-demo') !== false)
             <meta name="robots" content="noindex, nofollow">
         @else
             <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">

@@ -231,17 +231,19 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12 pr-30 md-mb-70 md-pr-15 d-flex align-items-center">
                     <div class="content-wrap">
-                        <h1 class="it-title" style="font-size: 36px!important;">
-                            QISS LAB - A Laboratory Workflow Management Software
+                        <h1 class="it-title" style="font-size: 38px!important; padding-bottom: 5px;">
+                            Marine Survey Management Software
                         </h1>
                         <div class="description">
+                            <p class="desc" style="text-align: justify; padding-bottom: 20px; font-size: 20px!important;">
+                                Streamline Inspections, Lab Testing, and Documentation for Maximum Efficiency
+                            </p>
                             <p class="desc" style="text-align: justify;">
-                                QISS LAB is a comprehensive lab workflow management software designed to address common
-                                challenges in laboratory operations. Many labs struggle with disorganized data, inefficient
-                                resource allocation, and compliance issues, leading to wasted time and increased costs. Our
-                                easy-to-use lab software offers a seamless solution that provides powerful features. With
-                                QISS LAB, you can streamline workflows, improve productivity, and ensure accurate reporting,
-                                all while maintaining compliance and facilitating collaboration.
+                                Our Marine Survey Management Software is designed to optimize every step of the inspection process, 
+                                from cargo assessments to lab testing and documentation. By automating workflows, integrating real-time 
+                                data, and ensuring seamless communication across teams, the software reduces manual effort, minimizes 
+                                errors, and accelerates decision-making. With easy access to historical inspection reports, lab results, 
+                                and compliance data, you can ensure faster, more accurate inspections while maintaining high standards of quality and safety.
                             </p>
                         </div>
                         <a class="readon btn-demo" href="https://www.qi-a.com/contact">Get A Free Demo</a>
@@ -249,181 +251,13 @@
                 </div>
 
                 <div class="col-lg-6 col-md-12 pl-30 md-pl-15 align-middle">
-                    <img src="{{ asset('storage/qiss-lab/lab-manager-is-talking-with-chemist-about-the-report.jpg') }}"
+                    <img src="{{ asset('storage/qiss-lab-marine/2048.png') }}"
                         alt="Automate Your Lab Management System">
                 </div>
             </div>
         </div>
     </div>
     <!-- Banner Section End -->
-
-    <!-- INDUSTRY Section Start -->
-    <div class="qia-partner style4 pb-20" style="background-color: #ffff;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 text-center pb-3">
-                    <h2 style="font-size: 32px!important;font-weight: bold;" class="m-0 text-capitalize">
-                        QISS LAB for Your Industries
-                    </h2>
-                    <p style="font-size: 18px!important;font-weight: bold;" class="m-0">A specialized software for your
-                        needs</p>
-                </div>
-                <div class="col-lg-12 mt-5">
-                    <div class="qia-industries">
-                        <div class="industries-grid">
-                            <!-- Industry Items will go here -->
-                        </div>
-
-                        <!-- See More Button -->
-                        <div class="see-more-btn text-center mt-4">
-                            <button class="quote-btn" onclick="toggleIndustries()">See More</button>
-                        </div>
-
-                        <!-- Loading animation -->
-                        <div class="loading-spinner" style="display: none;">
-                            <div class="spinner"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- INDUSTRY Section End -->
-
-    <!-- How We can Help - Start -->
-    <div class="qia-about pb-120 md-pt-80 md-pb-80" style="padding-top: 40px;background: #E7F1FB">
-        <div class="container">
-            <div class="row" style="padding-bottom: 40px;">
-                <div class="col-12 col-md-12 col-lg-12 col-xl-12">
-                    <h2 class="title text-center mb-0 mt-0 font-weight-bold text-capitalize"
-                        style="font-size: 30px !important;">
-                        How Can Our Laboratory Management Software Help You?
-                    </h2>
-                </div>
-            </div>
-            <div id="our-helps"></div>
-        </div>
-    </div>
-    <!-- How We can Help - End -->
-
-    <!-- Get Demo Section Start -->
-    <div class="qia-cta style1 bg7 pt-30 pb-30" style="background: url({{ asset('storage/qiss-lab/Banner-image-1.jpg') }});"
-        alt="QIA">
-        <div class="container">
-            <div class="cta-wrap">
-                <div class="row align-items-center">
-                    <div class="col-lg-9 col-md-12 md-mb-30">
-                        <div class="title-wrap">
-                            <h2 class="epx-title" style="font-size: 30px!important;">
-                                Make Lab Manager's Life Easier with QISS LAB
-                            </h2>
-                        </div>
-                        <p class="m-0" style="font-size: 17px!important; font-weight: 400; color: #ffffff;">
-                            Laboratory management software reduces paperwork and speeds progress by automating tasks,
-                            enabling digital documentation, providing real-time access, and streamlining reporting and
-                            compliance management.
-                        </p>
-                    </div>
-                    <div class="col-lg-3 text-right col-md-12">
-                        <div class="button-wrap">
-                            <a class="readon btn-demo"
-                                {{ get_option('get_demo_open_another_tab') == 1 ? 'target="_blank"' : '' }}
-                                href="{{ get_option('get_demo_button_url') }}">Get A Free Demo</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Get Demo Section End -->
-
-    {{-- SERVICES SECTION START --}}
-    <div class="qia-services gray-color main-home style2 pt-120 pb-120 md-pt-80 md-pb-80">
-        <div class="container">
-            <div class="sec-title2 text-center mb-45">
-                <h2 class="title title2">
-                    What QISS LAB Can Do?
-                </h2>
-                <div class="services-desc">
-                    <p>
-                        A Software To Help You Manage A Laboratory
-                    </p>
-                </div>
-            </div>
-            <div class="row" id="services-grid">
-                {{-- DYNAMIC CONTENT --}}
-            </div>
-        </div>
-    </div>
-    {{-- SERVICES SECTION END --}}
-
-    <!-- Get Demo Section Start -->
-    <div class="qia-cta style1 bg7 pt-30 pb-30"style="background: url({{ asset('storage/qiss-lab/Banner-image-1.jpg') }});"
-        alt="QIA">
-        <div class="container">
-            <div class="cta-wrap">
-                <div class="row align-items-center">
-                    <div class="col-lg-9 col-md-12 md-mb-30">
-                        <div class="title-wrap">
-                            <h2 class="epx-title" style="font-size: 30px!important;">
-                                Would You Like To Know More About Our QISS LAB?
-                            </h2>
-                        </div>
-                        <p class="m-0" style="font-size: 17px!important; font-weight: 400;color: #ffffff;">
-                            Contact our team to learn more about our product and how it can help your laboratory staff.
-                        </p>
-                    </div>
-                    <div class="col-lg-3 text-right col-md-12">
-                        <div class="button-wrap">
-                            <a class="readon btn-demo"
-                                {{ get_option('get_demo_open_another_tab') == 1 ? 'target="_blank"' : '' }}
-                                href="{{ get_option('get_demo_button_url') }}">Contact Our Team</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Get Demo Section End -->
-
-    <!-- How We can Help - Start -->
-    <div class="qia-about pt-5 pb-120 bg13  md-pt-80 md-pb-80">
-        <div class="container">
-            <div class="row align-items-center pt-50 pb-50">
-                <div class="col-lg-6 order-lg-1 md-pl-15">
-                    <div class="contact-wrap">
-                        <div class="sec-title">
-                            <h2 class="title pb-3 m-0">
-                                Why Choose QISS LAB Software To Manage Your Laboratory?
-                            </h2>
-                            <p class="desc pb-2 m-0" style="font-size: 16px;text-align:justify;">
-                                QISS LAB offers an easy-to-use platform designed to streamline laboratory workflow
-                                management. With customizable reports, users can tailor data presentation to meet specific
-                                needs. The integrated approval system ensures compliance with industry standards, while
-                                web-based access allows for convenient management from any location. Users can easily attach
-                                photos for documentation, improving record accuracy. Additionally, QISS LAB seamlessly
-                                integrates with QISS QMS, providing a comprehensive solution for maintaining quality and
-                                compliance in laboratory operations.
-                            </p>
-                        </div>
-                        <div class="btn-part">
-                            <a class="readon learn-more"
-                                {{ get_option('home_about_btn_open_another_tab') == 1 ? 'target="_blank"' : '' }}
-                                href="{{ get_option('home_about_btn_url') }}">
-                                {{ get_option('home_about_btn_text') }}
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-2">
-                    <div class="home8-about z-index-1">
-                        <img src="{{ asset('storage/qiss-lab/Why-choose-QISS-LAB.png') }}" alt="Why Choose QISS LAB">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- How We can Help - End -->
 
     <!-- Client Partner Section Start -->
     <div class="qia-partner style4 pb-20" style="background-color: #ffff;">
@@ -457,6 +291,217 @@
         </div>
     </div>
     <!-- Client Partner Section End -->
+
+    <!-- INDUSTRY Section Start -->
+    {{-- <div class="qia-partner style4 pb-20" style="background-color: #ffff;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 text-center pb-3">
+                    <h2 style="font-size: 32px!important;font-weight: bold;" class="m-0 text-capitalize">
+                        QISS LAB for Your Industries
+                    </h2>
+                    <p style="font-size: 18px!important;font-weight: bold;" class="m-0">A specialized software for your
+                        needs</p>
+                </div>
+                <div class="col-lg-12 mt-5">
+                    <div class="qia-industries">
+                        <div class="industries-grid">
+                            <!-- Industry Items will go here -->
+                        </div>
+
+                        <!-- See More Button -->
+                        <div class="see-more-btn text-center mt-4">
+                            <button class="quote-btn" onclick="toggleIndustries()">See More</button>
+                        </div>
+
+                        <!-- Loading animation -->
+                        <div class="loading-spinner" style="display: none;">
+                            <div class="spinner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> --}}
+    <!-- INDUSTRY Section End -->
+
+    <!-- How We can Help - Start -->
+    <div class="qia-about pb-120 md-pt-80 md-pb-80" style="padding-top: 40px;background: #E7F1FB">
+        <div class="container">
+            <div class="row" style="padding-bottom: 40px;">
+                <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+                    <h2 class="title text-center mb-0 mt-0 font-weight-bold text-capitalize"
+                        style="font-size: 30px !important;">
+                        How Can Our Laboratory Management Software Help You?
+                    </h2>
+                </div>
+            </div>
+            <div id="our-helps"></div>
+        </div>
+    </div>
+    <!-- How We can Help - End -->
+
+    <!-- Get Demo Section Start -->
+    <div class="qia-cta style1 bg7 pt-30 pb-30" style="background: url({{ asset('storage/qiss-lab/Banner-image-1.jpg') }});"
+        alt="QIA">
+        <div class="container">
+            <div class="cta-wrap">
+                <div class="row align-items-center">
+                    <div class="col-lg-9 col-md-12 md-mb-30">
+                        <div class="title-wrap">
+                            <h2 class="epx-title" style="font-size: 30px!important;">
+                                A Software for Marine Surveyor
+                            </h2>
+                        </div>
+                        <p class="m-0" style="font-size: 17px!important; font-weight: 400; color: #ffffff;">
+                            Marine management software helps surveyors streamline inspections, ensure regulatory compliance, 
+                            manage data efficiently, and improve collaboration for faster, accurate reports.
+                        </p>
+                    </div>
+                    <div class="col-lg-3 text-right col-md-12">
+                        <div class="button-wrap">
+                            <a class="readon btn-demo"
+                                {{ get_option('get_demo_open_another_tab') == 1 ? 'target="_blank"' : '' }}
+                                href="{{ get_option('get_demo_button_url') }}">Get A Free Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Get Demo Section End -->
+
+    {{-- SERVICES SECTION START --}}
+    <div class="qia-services gray-color main-home style2 pt-120 pb-120 md-pt-80 md-pb-80">
+        <div class="container">
+            <div class="sec-title2 text-center mb-45">
+                <h2 class="title title2" style="max-width: fit-content!important;">
+                    What QISS LAB Can Do for Marine Industry?
+                </h2>
+                <div class="services-desc">
+                    <p style="font-size: 18px;">
+                        A Specialized Software to Solve Your Management Problem
+                    </p>
+                </div>
+            </div>
+            <div class="row" id="services-grid">
+                {{-- DYNAMIC CONTENT --}}
+            </div>
+        </div>
+    </div>
+    {{-- SERVICES SECTION END --}}
+
+    <!-- Get Demo Section Start -->
+    <div class="qia-cta style1 bg7 pt-30 pb-30"style="background: url({{ asset('storage/qiss-lab/Banner-image-1.jpg') }});"
+        alt="QIA">
+        <div class="container">
+            <div class="cta-wrap">
+                <div class="row align-items-center">
+                    <div class="col-lg-9 col-md-12 md-mb-30">
+                        <div class="title-wrap">
+                            <h2 class="epx-title" style="font-size: 30px!important;">
+                                Would You Like To Know More About Our QISS LAB?
+                            </h2>
+                        </div>
+                        <p class="m-0" style="font-size: 17px!important; font-weight: 400;color: #ffffff;">
+                            Contact our team to learn more about our product and how it can help you.
+                        </p>
+                    </div>
+                    <div class="col-lg-3 text-right col-md-12">
+                        <div class="button-wrap">
+                            <a class="readon btn-demo"
+                                {{ get_option('get_demo_open_another_tab') == 1 ? 'target="_blank"' : '' }}
+                                href="{{ get_option('get_demo_button_url') }}">Contact Our Team</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Get Demo Section End -->
+
+    <!-- How We can Help - Start -->
+    <div class="qia-about pt-5 pb-120 bg13  md-pt-80 md-pb-80">
+        <div class="container">
+            <div class="row align-items-center pt-50 pb-50">
+                <div class="col-lg-6 order-lg-1 md-pl-15">
+                    <div class="contact-wrap">
+                        <div class="sec-title">
+                            <h2 class="title pb-3 m-0">
+                                Why Marine Surveyors Should Use QISS LAB?
+                            </h2>
+                            <p class="desc pb-2 m-0" style="font-size: 16px;text-align:justify;">
+                                Marine surveyors should use QISS LAB for its all-in-one solution for cargo inspection and lab testing, 
+                                ensuring accurate, reliable results. The web-based platform offers flexibility, while the approval system 
+                                ensures transparency and accountability. Customizable to fit specific needs, QISS LAB is easy to use, 
+                                streamlining tasks and reducing errors. With QISS LAB, surveyors can efficiently 
+                                manage inspections, improve compliance, and enhance overall productivity.
+                            </p>
+                        </div>
+                        <div class="btn-part">
+                            <a class="readon learn-more"
+                                {{ get_option('home_about_btn_open_another_tab') == 1 ? 'target="_blank"' : '' }}
+                                href="{{ get_option('home_about_btn_url') }}">
+                                {{ get_option('home_about_btn_text') }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2">
+                    <div class="home8-about z-index-1">
+                        <img src="{{ asset('storage/qiss-lab/Why-choose-QISS-LAB.png') }}" alt="Why Choose QISS LAB">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="qia-about pt-5 pb-120 md-pt-80 md-pb-80">
+        <div class="container">
+            <div class="row align-items-center pt-50 pb-50">
+                <div class="col-md-6">
+                    <div class="process-wrap bg3" style="padding: 30px; background: #E7F1FB;margin: 0px;">
+                        <div class="home8-about z-index-1" style="margin-bottom: 20px;">
+                            <img src="{{ asset('storage/qiss-lab-marine/2048X1170.png') }}" alt="Collaboration &amp; Communication Challenges">
+                        </div>
+                        <div class="sec-title">
+                            <h3 class="title" style="margin-bottom: 10px;">
+                                Marine Inspection
+                            </h3>
+                            <p class="" style="font-size: 17px;margin: 0px;text-align: justify;">
+                                Our software allows you to create detailed inspection tasks with customizable checklists, 
+                                ensuring all critical areas are covered. You can easily schedule inspections, track progress 
+                                in real-time, and ensure timely completion. Additionally, you can access previous inspection 
+                                reports to review the cargo's history, helping to identify recurring issues, track maintenance, 
+                                and ensure consistency. This seamless integration of 
+                                historical data improves decision-making and enhances overall inspection efficiency.    
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="process-wrap bg3" style="padding: 30px; background: #E7F1FB;margin: 0px;">
+                        <div class="home8-about z-index-1" style="margin-bottom: 20px;">
+                            <img src="{{ asset('storage/qiss-lab-marine/2048X1170.png') }}" alt="Collaboration &amp; Communication Challenges">
+                        </div>
+                        <div class="sec-title">
+                            <h3 class="title" style="margin-bottom: 10px;">
+                                Marine Lab Testing
+                            </h3>
+                            <p class="" style="font-size: 17px;margin: 0px;text-align: justify;">
+                                Surveyors can easily send samples for lab testing to assess cargo quality and compliance. The software 
+                                automatically alerts lab technicians when a sample is submitted, ensuring timely processing. Surveyors 
+                                can access real-time lab results directly within the platform, allowing for quicker quality control decisions. 
+                                This streamlined process enhances coordination between inspectors and lab staff, reduces delays, and ensures 
+                                that cargo quality is continuously monitored, improving overall efficiency and compliance.   
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- How We can Help - End -->
 
     <!-- Testimonial Section -->
     <div class="qia-testimonial style8 gray-color pt-30 pb-50 md-pt-80 md-pb-80">
@@ -511,46 +556,26 @@
                         @endforeach
                     </div>
                 </div>
-                {{-- <div class="col-xl-4 col-lg-4 col-md-12">
-                    <div class="qia-contact mod1">
-                        <div class="contact-wrap" style="padding: 0;;" id="testimonial_content">
-                            <img src="storage/home-page-content/EeOtq5mPasiYvpjBryAVxFL5paxVjnFQOgoS38g5.png"
-                                alt="">
-                            <div class="qia-videos">
-                                <div class="animate-border main-home">
-                                    <h4 class="testimonial-h4">{{ $testimonialName }}</h4>
-                                    <h5 class="testimonial-h6">{{ $testimonialDesignation }}</h5>
-                                    <a style="left: 50%;top: 30%;" class="popup-border popup-videos content_management"
-                                        href="javascript:;"
-                                        data-url="{{ url('show-banner-video?id=' . $testimonialLink) }}">
-                                        <i class="fa fa-play"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
             </div>
         </div>
     </div>
     <!-- Testimonial Section -->
 
     <!-- About Us - Start -->
-    <div class="qia-about pt-5 pb-120 bg13  md-pt-80 md-pb-80">
+    <div class="qia-about pt-5 pb-120 bg13  md-pt-80 md-pb-80" style="background: #2A368F;">
         <div class="container">
             <div class="row align-items-center pt-50 pb-50">
                 <div class="col-lg-6 order-lg-2">
                     <div class="contact-wrap">
                         <div class="sec-title pb-3">
-                            <h2 class="title pb-3">
+                            <h2 class="title pb-3 white-color">
                                 About QIA
                             </h2>
-                            <p class="desc m-0">
-                                Quality Institute of America is a software company based in Houston, Texas. We are dedicated
-                                to improving our client’s profitability through effective management systems. Our flagship
-                                product is QISS QMS software which automates Quality Management Systems by streamlining
-                                processes for greater efficiency. We are excited to introduce QISS LAB, our latest software
-                                designed to further support labs in optimizing their operations.
+                            <p class="desc m-0 white-color" style="text-align: justify;">
+                                Quality Institute of America, based in Houston, Texas, is committed to enhancing client profitability 
+                                through efficient management systems. Our flagship product, QISS QMS software, automates Quality Management 
+                                Systems, streamlining processes for improved efficiency. We are proud to introduce QISS LAB, our newest software solution, 
+                                designed to help businesses optimize their operations and further elevate productivity and accuracy.
                             </p>
                         </div>
                         <div class="btn-part">
@@ -562,7 +587,7 @@
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="home8-about z-index-1">
-                        <img src="{{ asset('storage/qiss-lab/6_11zon.jpg') }}" alt="QISS LAB">
+                        <img src="{{ asset('storage/qiss-lab-marine/2048X1170.png') }}" alt="QISS LAB">
                     </div>
                 </div>
             </div>
@@ -647,149 +672,45 @@
     </div>
     <!-- Blog Section End -->
 
-    <div class="modal fade" id="modal_remote" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content" id="remote_modal_content">
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="book_modal_remote" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content" id="book_remote_modal_content">
-
-            </div>
-        </div>
-    </div>
-
     <script>
-        let isShowingMore = false; // Initial state: showing only 4 industries
-
-        const toggleIndustries = () => {
-            const industriesGrid = document.querySelector('.industries-grid');
-            const button = document.querySelector('.see-more-btn button');
-            const spinner = document.querySelector('.loading-spinner');
-
-            // Industry items
-            const industries = [{
-                    title: "Chemical Industry",
-                    img: "{{ asset('storage/qiss-lab/Chemical-Industry.svg') }}"
-                },
-                {
-                    title: "Oil & Gas Industry",
-                    img: "{{ asset('storage/qiss-lab/Oil-Gas-Industry.svg') }}"
-                },
-                {
-                    title: "Marine Industry",
-                    img: "{{ asset('storage/qiss-lab/Marine-Industry.svg') }}"
-                },
-                {
-                    title: "Water Industry",
-                    img: "{{ asset('storage/qiss-lab/Water-Industry.svg') }}"
-                },
-                {
-                    title: "Research Industry",
-                    img: "{{ asset('storage/qiss-lab/Research-Industry.svg') }}"
-                },
-                // Add more industries as needed
-            ];
-
-            const initialVisibleCount = 4;
-
-            // Show loading spinner
-            spinner.style.display = 'flex';
-
-            setTimeout(() => {
-                spinner.style.display = 'none'; // Hide loading spinner
-
-                // Clear any existing industries
-                industriesGrid.innerHTML = '';
-
-                if (isShowingMore) {
-                    // Show all industries when "See Less" is clicked
-                    industries.forEach(industry => {
-                        let industryElement = document.createElement('div');
-                        industryElement.classList.add('industry-card');
-
-                        // Populate industry data
-                        industryElement.innerHTML = `
-                            <div class="logo-img text-center">
-                                <a href="javascript:;">
-                                    <img src="${industry.img}" style="width: 100px; margin: auto;" alt="${industry.title}">
-                                    <span class="industry-title">${industry.title}</span>
-                                </a>
-                            </div>
-                        `;
-                        industriesGrid.appendChild(industryElement);
-                    });
-                    button.innerText = 'See Less';
-                } else {
-                    // Show only the first 4 industries initially
-                    industries.slice(0, initialVisibleCount).forEach(industry => {
-                        let industryElement = document.createElement('div');
-                        industryElement.classList.add('industry-card');
-
-                        // Populate industry data
-                        industryElement.innerHTML = `
-                            <div class="logo-img text-center">
-                                <a href="javascript:;">
-                                    <img src="${industry.img}" style="width: 100px; margin: auto;" alt="${industry.title}">
-                                    <span class="industry-title">${industry.title}</span>
-                                </a>
-                            </div>
-                        `;
-                        industriesGrid.appendChild(industryElement);
-                    });
-                    button.innerText = 'See More';
-                }
-
-                // Toggle the state
-                isShowingMore = !isShowingMore;
-
-            }, 500); // Delay for loading effect
-        }
-
         const loadServices = () => {
             const defaultIcon = "{{ asset('img/shape.png') }}";
             const servicesList = [{
-                "title": "Data Management",
-                "description": "You can organize, store, and retrieve lab data efficiently to ensure accurate analysis and reporting.",
-                "img": "{{ asset('storage/qiss-lab/Data-Management.svg') }}"
+                "title": "Workflow Automation",
+                "description": "Streamline tasks with automated workflows, reducing manual errors and increasing operational efficiency.",
+                "img": "{{ asset('storage/qiss-lab-marine/landscape-placeholder.svg') }}"
             }, {
-                "title": "Inventory Management",
-                "description": "You can track supplies, reagents, and equipment to prevent shortages and reduce waste with QISS LAB software.",
-                "img": "{{ asset('storage/qiss-lab/inventory-management.svg') }}"
+                "title": "Inspections",
+                "description": "Conduct thorough, real-time inspections of vessels and cargo, ensuring compliance and safety with checklists and detailed work instructions.",
+                "img": "{{ asset('storage/qiss-lab-marine/landscape-placeholder.svg') }}"
             }, {
-                "title": "Order & Invoicing",
-                "description": "Maintain financial efficiency in labs by tracking orders from suppliers and generating invoices for services.",
-                "img": "{{ asset('storage/qiss-lab/order.svg') }}"
-            }, {
-                "title": "Inspection",
-                "description": "Assess equipment, procedures and practices to identify potential hazards and areas for improvement.",
-                "img": "{{ asset('storage/qiss-lab/Inspection.svg') }}"
-            }, {
-                "title": "Sample Management",
-                "description": "Easily track, retain, and analyze samples with our software, ensuring proper documentation during the research process.",
-                "img": "{{ asset('storage/qiss-lab/sample.svg') }}"
-            }, {
-                "title": "Scheduling",
-                "description": "Efficiently manage lab schedules to ensure optimal resource allocation and minimizing conflicts to improve productivity.",
-                "img": "{{ asset('storage/qiss-lab/Scheduling.svg') }}"
-            }, {
-                "title": "Testing",
-                "description": "QISS Lab streamlines testing processes, ensuring accuracy and efficiency in managing lab tests and results.",
-                "img": "{{ asset('storage/qiss-lab/test.svg') }}"
+                "title": "Lab Testing",
+                "description": "Ensuring accurate cargo quality control by integrating lab test results seamlessly into inspection workflows.",
+                "img": "{{ asset('storage/qiss-lab-marine/landscape-placeholder.svg') }}"
             }, {
                 "title": "Reporting",
-                "description": "Generate comprehensive reports with ease, allowing for quick insights and informed decision-making.",
-                "img": "{{ asset('storage/qiss-lab/Report.svg') }}"
+                "description": "Generate detailed reports on vessel conditions, cargo inspections, and compliance status.",
+                "img": "{{ asset('storage/qiss-lab-marine/landscape-placeholder.svg') }}"
             }, {
-                "title": "Document Control",
-                "description": "Maintain organized, secure and easily accessible documents, ensuring compliance and facilitating collaboration.",
-                "img": "{{ asset('storage/qiss-lab/Document-control.svg') }}"
+                "title": "Data Management",
+                "description": "Centralize and secure vast amounts of inspection data, ensuring easy access and analysis across the marine supply chain.",
+                "img": "{{ asset('storage/qiss-lab-marine/landscape-placeholder.svg') }}"
+            }, {
+                "title": "Documentation",
+                "description": "Standardize inspection reports, certificates, and compliance documentation, ensuring accuracy and document control across all marine operations.",
+                "img": "{{ asset('storage/qiss-lab-marine/landscape-placeholder.svg') }}"
+            }, {
+                "title": "Scheduling",
+                "description": "Optimize inspection and survey schedules with calendar management to ensure timely completion of all marine operations.",
+                "img": "{{ asset('storage/qiss-lab-marine/landscape-placeholder.svg') }}"
+            }, {
+                "title": "Collaboration",
+                "description": "Improve teamwork and communication across surveyors, inspectors, and stakeholders by sharing real-time updates.",
+                "img": "{{ asset('storage/qiss-lab-marine/landscape-placeholder.svg') }}"
+            }, {
+                "title": "Integration",
+                "description": "Integrating with existing systems or QISS QMS improves efficiency, supports HSE, training, and quality management across departments.",
+                "img": "{{ asset('storage/qiss-lab-marine/landscape-placeholder.svg') }}"
             }];
 
             // Assuming servicesList is already populated with data
@@ -799,7 +720,7 @@
 
                 // Populate service data
                 serviceElement.innerHTML = `
-                    <div class="services-item">
+                    <div class="services-item" style="min-height:345px;">
                         <div class="services-icon">
                             <div class="image-part">
                                 <a href="javascript:;">
@@ -828,14 +749,11 @@
 
         const loadFaq = () => {
             const questionsList = [{
-                "title": "What is lab management software?",
-                "description": "It is a software that can streamline lab workflows by organizing data, tracking inventory, and managing samples efficiently.",
+                "title": "What does a marine surveyor do​?",
+                "description": "A marine surveyor inspects ships, cargo, and equipment to ensure safety, compliance, and condition. They specifically inspect cargo tanks and holds for the acceptability of cleaning from prior cargo before new cargo is loaded, particularly for sensitive chemical cargo. Marine surveyors also witness cargo loading, perform cargo sampling, and oversee cargo tank sealing to ensure proper handling and compliance with regulatory standards.",
             }, {
-                "title": "Why should I use it?",
-                "description": "You should use it to automate lab workflows and reduce miscommunications between field staff and lab technicians.",
-            }, {
-                "title": "How can it help lab managers?",
-                "description": "It will allow lab managers to assign a task, see the results and approve any task remotely.",
+                "title": "What specialized knowledge is required for cargo surveying?",
+                "description": "Understanding of cargo loading, stowage, securing practices, and international regulations related to cargo handling. Surveyors also investigate cargo damage claims and develop loss prevention strategies.",
             }];
 
             // Assuming servicesList is already populated with data
@@ -878,30 +796,30 @@
         const loadHelpSection = () => {
             const helpsList = [
                 {
-                    "title": "Automate Your Lab Management System",
-                    "description": "Automating your lab management system can significantly improve efficiency and accuracy. By integrating QISS LAB software, you can simplify processes such as sample tracking, inventory management, and data analysis. Automation reduces human error, ensuring reliable results and better compliance with regulatory standards.",
-                    "img": "{{ asset('storage/qiss-lab/automate-lab-workflow.jpg') }}",
+                    "title": "Regulatory Compliance & Documentation Challenges",
+                    "description": "Marine survey management software can automate and streamline regulatory compliance by integrating the latest industry regulations into its platform. This software can help you to ensure that inspections, documentation, and reporting align with global standards like IMO, SOLAS, and MARPOL. By digitizing paperwork and reducing manual data entry, it eliminates the risk of human error while ensuring accurate and timely documentation. Real-time updates help inspectors stay on top of evolving regulations, reducing the risk of non-compliance and shipment delays.",
+                    "img": "{{ asset('storage/qiss-lab-marine/2048X1170.png') }}",
                     "hasButton": false,
                     "buttonUrl": null,
                     "buttonText": null
                 }, {
-                    "title": "Increase Productivity & Save Time",
-                    "description": "Lab management software improves productivity and saves time by automating routine tasks. With simplified workflows, researchers can focus on critical activities rather than administrative burdens. Real-time data access enables quick decision-making, while automated reporting features minimize manual documentation. By optimizing resource allocation, laboratory software creates a more efficient environment, ultimately leading to faster research outcomes and improved overall performance.",
-                    "img": "{{ asset('storage/qiss-lab/improve-productivity.jpeg') }}",
+                    "title": "Operational & Workflow Efficiency Challenges",
+                    "description": "Our software can improve operational efficiency by standardizing inspection procedures and workflows. The platform allows marine inspectors to follow a consistent process regardless of location, ensuring accuracy and reducing errors. Scheduling and reporting features help inspectors manage multiple tasks, prioritize inspections, and meet tight deadlines. Access to historical data provides valuable insights into vessel performance, reducing delays and boosting the overall efficiency of cargo inspections and management.",
+                    "img": "{{ asset('storage/qiss-lab-marine/2048X1170.png') }}",
                     "hasButton": false,
                     "buttonUrl": null,
                     "buttonText": null
                 }, {
-                    "title": "Reducing Risk of Errors",
-                    "description": "Our software can significantly reduce the risk of errors by automating data entry and standardizing processes. By minimizing manual tasks, it decreases the likelihood of human mistakes, ensuring more accurate results. Real-time data validation alerts users to discrepancies, enhancing data integrity. Implementing a lab management software fosters a more reliable environment, allowing researchers to focus on quality and precision in their work.",
-                    "img": "{{ asset('storage/qiss-lab/risk-of-error.jpg') }}",
+                    "title": "Data Management & Tracking Challenges",
+                    "description": "This software can centralize all inspection data, making it easier to track cargo conditions, inspection results, and historical performance. With cloud-based solutions and real-time data entry, inspectors can access up-to-date information from anywhere, improving data accuracy and reducing the risk of lost or incomplete records. Automated integration with lab testing results ensure that sensitive or perishable cargo is constantly monitored, while detailed cargo histories allow for comprehensive analysis and better decision-making across the entire supply chain.",
+                    "img": "{{ asset('storage/qiss-lab-marine/2048X1170.png') }}",
                     "hasButton": false,
                     "buttonUrl": null,
                     "buttonText": null
                 }, {
-                    "title": "Prevent Raw Data Loss",
-                    "description": "Preventing data loss is crucial in lab management, and our specialized QISS LAB software offers robust solutions. Automated backups ensure that critical research data is securely stored and easily retrievable. Real-time monitoring alerts users to potential issues, while user access controls safeguard sensitive information. By centralizing data management, laboratory management software minimizes risks, improving both compliance and research integrity.",
-                    "img": "{{ asset('storage/qiss-lab/prevent-lab-data-loss.jpg') }}",
+                    "title": "Collaboration & Communication Challenges",
+                    "description": "Our marine survey management system fosters seamless collaboration among all stakeholders—port authorities, shipping companies, customs, inspectors, and lab technicians. By providing a centralized platform for data sharing, emailing, and task assignment, the software ensures that everyone is on the same page. Real-time updates and instant access to inspection reports help eliminate communication gaps and minimize delays. This streamlined communication process improves inspection speed and accuracy, ensuring cargo can be cleared quickly, safely, and without unnecessary holdups.",
+                    "img": "{{ asset('storage/qiss-lab-marine/2048X1170.png') }}",
                     "hasButton": false,
                     "buttonUrl": null,
                     "buttonText": null
@@ -943,7 +861,6 @@
         }
 
         window.onload = function() {
-            toggleIndustries();
             loadServices();
             loadFaq();
             loadHelpSection();

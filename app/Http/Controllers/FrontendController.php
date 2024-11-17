@@ -707,28 +707,30 @@ class FrontendController extends Controller
     {
         $meta = new \stdClass();
 
-        $meta->title = "Marine Cargo Inspection";
-        $meta->meta_title = "Marine Cargo Inspection";
+        $meta->title = "Lab Workflow Management Software | QISS LAB | Get A Demo";
+        $meta->meta_title = "Lab Workflow Management Software | QISS LAB | Get A Demo";
         $meta->meta_keyword = "";
         $meta->article_tag = "";
         $meta->script_tag = "";
-        $meta->meta_description = "We offers inspection, survey, laboratory testing and diving services for a wide range of agricultural, industrial and marine products.";
+        $meta->meta_description = "QISS LAB is an easy-to-use lab workflow management software designed to solve everyday challenges in laboratory operations. Get a demo today.";
 
-        return view('frontend.static_qiss_lab', compact('meta'));
+        return view('frontend.static_qiss_lab-v2', compact('meta'));
     }
 
-    public function staticQISSLabV2() 
+    public function staticQISSLabMarineDemo() 
     {
         $meta = new \stdClass();
 
-        $meta->title = "Marine Cargo Inspection";
-        $meta->meta_title = "Marine Cargo Inspection";
-        $meta->meta_keyword = "";
+        $meta->title = "Marine Survey Management Software​ | Inspection & Lab Test";
+        $meta->meta_title = "Marine Survey Management Software​ | Inspection & Lab Test";
+        $meta->meta_keyword = "marine management systems, marine management software​, marine inspection, marine survey,marine inspection, 
+                                marine survey, marine safety management system software​, marine risk management software​, lab for marine testing​";
         $meta->article_tag = "";
         $meta->script_tag = "";
-        $meta->meta_description = "We offers inspection, survey, laboratory testing and diving services for a wide range of agricultural, industrial and marine products.";
+        $meta->meta_description = "QISS LAB can help you manage Marine Surveys, Inspections, and Lab Tests. 
+                                    Co-ordinate between inspector and lab staff to ensure cargo quality now.";
 
-        return view('frontend.static_qiss_lab-v2', compact('meta'));
+        return view('frontend.static_qiss_lab-marine', compact('meta'));
     }
     
     public function staticOldQMSManagement() 
