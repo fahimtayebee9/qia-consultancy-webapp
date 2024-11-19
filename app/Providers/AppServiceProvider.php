@@ -28,6 +28,8 @@ class AppServiceProvider extends ServiceProvider
 
         if (URL::current() === url('/qiss-lab-demo')) {
             return redirect('/qiss-lab', 301)->send();
+        } else if (URL::current() === url('/qiss-lab/marine-demo')) {
+            return redirect('/qiss-lab/marine', 301)->send();
         }
     }
 }

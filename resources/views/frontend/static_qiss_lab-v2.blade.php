@@ -676,23 +676,28 @@
             // Industry items
             const industries = [{
                     title: "Chemical Industry",
-                    img: "{{ asset('storage/qiss-lab/Chemical-Industry.svg') }}"
+                    img: "{{ asset('storage/qiss-lab/Chemical-Industry.svg') }}",
+                    url: ""
                 },
                 {
                     title: "Oil & Gas Industry",
-                    img: "{{ asset('storage/qiss-lab/Oil-Gas-Industry.svg') }}"
+                    img: "{{ asset('storage/qiss-lab/Oil-Gas-Industry.svg') }}",
+                    url: ""
                 },
                 {
                     title: "Marine Industry",
-                    img: "{{ asset('storage/qiss-lab/Marine-Industry.svg') }}"
+                    img: "{{ asset('storage/qiss-lab/Marine-Industry.svg') }}",
+                    url: "{{ route('qiss-lab-marine') }}"
                 },
                 {
                     title: "Water Industry",
-                    img: "{{ asset('storage/qiss-lab/Water-Industry.svg') }}"
+                    img: "{{ asset('storage/qiss-lab/Water-Industry.svg') }}",
+                    url: ""
                 },
                 {
                     title: "Research Industry",
-                    img: "{{ asset('storage/qiss-lab/Research-Industry.svg') }}"
+                    img: "{{ asset('storage/qiss-lab/Research-Industry.svg') }}",
+                    url: ""
                 },
                 // Add more industries as needed
             ];
@@ -717,7 +722,7 @@
                         // Populate industry data
                         industryElement.innerHTML = `
                             <div class="logo-img text-center">
-                                <a href="javascript:;">
+                                <a href="${ industry.url ?? 'javascript:;' }">
                                     <img src="${industry.img}" style="width: 100px; margin: auto;" alt="${industry.title}">
                                     <span class="industry-title">${industry.title}</span>
                                 </a>

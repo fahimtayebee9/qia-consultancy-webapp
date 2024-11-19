@@ -717,7 +717,7 @@ class FrontendController extends Controller
         return view('frontend.static_qiss_lab-v2', compact('meta'));
     }
 
-    public function staticQISSLabMarineDemo() 
+    public function staticQISSLabMarine() 
     {
         $meta = new \stdClass();
 

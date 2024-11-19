@@ -1,10 +1,8 @@
 <?php
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
- */
+// REDIRECTION ROUTES
+Route::redirect('/qiss-lab-demo', '/qiss-lab', 301);
+Route::redirect('/qiss-lab/marine-demo', '/qiss-lab/marine', 301);
+
 // Static Menu Start 
 Route::post('schedule-appointment', 'FrontendController@scheduleAppointment')->name('schedule-appointment');
 Route::get('static-menu-one', 'FrontendController@staticMenuOne')->name('static-menu-one'); # copy this link
@@ -13,8 +11,7 @@ Route::get('qms-management', 'FrontendController@staticQMSManagement')->name('qm
 Route::get('ncr-management', 'FrontendController@staticNCRManagement')->name('ncr-management');
 Route::get('lab-management', 'FrontendController@staticLABManagement')->name('lab-management');
 Route::get('qiss-lab', 'FrontendController@staticQISSLab')->name('qiss-lab');
-Route::get('qiss-lab/marine-demo', 'FrontendController@staticQISSLabMarineDemo')->name('qiss-lab-marine-demo');
-// Route::get('qiss-lab/marine', 'FrontendController@staticQISSLabMarine')->name('qiss-lab-marine');
+Route::get('qiss-lab/marine', 'FrontendController@staticQISSLabMarine')->name('qiss-lab-marine');
 Route::get('old-qms-management', 'FrontendController@staticOldQMSManagement')->name('old-qms-management');	
 // Static Menu End
 
@@ -45,6 +42,14 @@ Route::get('news','FrontendController@news')->name('news');
 Route::get('case-study','FrontendController@case_study')->name('case-study');
 Route::get('get_solution_details','FrontendController@get_solution_details')->name('get_solution_details');
 Route::get('get_testimonial_details','FrontendController@get_testimonial_details')->name('get_testimonial_details');
+
+
+/*
+|--------------------------------------------------------------------------
+| Backend Routes
+|--------------------------------------------------------------------------
+|
+ */
 
 Auth::routes();
 Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'admin', 'middleware' => ['auth']], function () {
