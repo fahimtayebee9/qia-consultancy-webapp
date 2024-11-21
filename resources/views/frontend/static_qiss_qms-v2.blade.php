@@ -242,16 +242,16 @@
                 <div class="col-lg-6 col-md-12 pr-30 md-mb-70 md-pr-15 d-flex align-items-center">
                     <div class="content-wrap">
                         <h1 class="it-title" style="font-size: 36px!important;">
-                            QISS LAB - A Laboratory Workflow Management Software
+                            Quality Control Management Software
                         </h1>
                         <div class="description">
                             <p class="desc" style="text-align: justify;">
-                                QISS LAB is a comprehensive lab workflow management software designed to address common
-                                challenges in laboratory operations. Many labs struggle with disorganized data, inefficient
-                                resource allocation, and compliance issues, leading to wasted time and increased costs. Our
-                                easy-to-use lab software offers a seamless solution that provides powerful features. With
-                                QISS LAB, you can streamline workflows, improve productivity, and ensure accurate reporting,
-                                all while maintaining compliance and facilitating collaboration.
+                                Many organizations struggle with quality management challenges like inefficient document handling, 
+                                limited data visibility, and risk management. At QISS, we recognize these frustrations and offer our 
+                                Quality Management Software (QMS) designed to meet your needs. With tailored modules that simplify 
+                                daily tasks, QISS QMS not only helps you maintain compliance with standards like ISO 9001 but also 
+                                improves your overall operational efficiency. Let us help you achieve a 
+                                smoother quality management experience—your success is our success.
                             </p>
                         </div>
                         <a class="readon btn-demo" href="https://www.qi-a.com/contact">Get A Free Demo</a>
@@ -396,6 +396,39 @@
     </div>
     <!-- Get Demo Section End -->
 
+    <!-- INDUSTRY Section Start -->
+    <div class="qia-partner style4 pb-20" style="background-color: #ffff;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 text-center pb-3">
+                    <h2 style="font-size: 32px!important;font-weight: bold;" class="m-0 text-capitalize">
+                        QISS LAB for Your Industries
+                    </h2>
+                    <p style="font-size: 18px!important;font-weight: bold;" class="m-0">A specialized software for your
+                        needs</p>
+                </div>
+                <div class="col-lg-12 mt-5">
+                    <div class="qia-industries">
+                        <div class="industries-grid">
+                            <!-- Industry Items will go here -->
+                        </div>
+
+                        <!-- See More Button -->
+                        <div class="see-more-btn text-center mt-4">
+                            <button class="quote-btn" onclick="toggleIndustries()">See More</button>
+                        </div>
+
+                        <!-- Loading animation -->
+                        <div class="loading-spinner" style="display: none;">
+                            <div class="spinner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- INDUSTRY Section End -->
+
     <!-- How We can Help - Start -->
     <div class="qia-about pt-5 pb-120 bg13  md-pt-80 md-pb-80">
         <div class="container">
@@ -434,39 +467,6 @@
         </div>
     </div>
     <!-- How We can Help - End -->
-
-    <!-- Client Partner Section Start -->
-    <div class="qia-partner style4 pb-20" style="background-color: #ffff;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 text-center pb-3">
-                    <h2 style="font-size: 32px!important;font-weight: bold; margin-top:0px;margin-bottom: 20px;">
-                        Our Clients
-                    </h2>
-                </div>
-                <div class="col-lg-12">
-                    <div class="qia-carousel owl-carousel" data-autoplay="true" data-loop="true" data-items="4"
-                        data-rtl="true" data-smart-speed="1000" data-hoverpause="false" data-nav-speed="true"
-                        data-autoplay-timeout="2500">
-                        @php
-                            $clientPartners = App\ClientPartner::get();
-                        @endphp
-                        @foreach ($clientPartners as $clientPartner)
-                            <div class="partner-item">
-                                <div class="logo-img">
-                                    <a href="javascript:;">
-                                        <img src="{{ asset('storage/home-page-content/' . $clientPartner->picture) }}"
-                                            alt="{{ $clientPartner->alt_tag }}">
-                                    </a>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Client Partner Section End -->
 
     <!-- Testimonial Section -->
     <div class="qia-testimonial style8 gray-color pt-30 pb-50 md-pt-80 md-pb-80">
@@ -544,6 +544,74 @@
         </div>
     </div>
     <!-- Testimonial Section -->
+
+    <!-- Client Partner Section Start -->
+    <div class="qia-partner style4 pb-20" style="background-color: #ffff;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 text-center pb-3">
+                    <h2 style="font-size: 32px!important;font-weight: bold; margin-top:0px;margin-bottom: 20px;">
+                        Our Clients
+                    </h2>
+                </div>
+                <div class="col-lg-12">
+                    <div class="qia-carousel owl-carousel" data-autoplay="true" data-loop="true" data-items="4"
+                        data-rtl="true" data-smart-speed="1000" data-hoverpause="false" data-nav-speed="true"
+                        data-autoplay-timeout="2500">
+                        @php
+                            $clientPartners = App\ClientPartner::get();
+                        @endphp
+                        @foreach ($clientPartners as $clientPartner)
+                            <div class="partner-item">
+                                <div class="logo-img">
+                                    <a href="javascript:;">
+                                        <img src="{{ asset('storage/home-page-content/' . $clientPartner->picture) }}"
+                                            alt="{{ $clientPartner->alt_tag }}">
+                                    </a>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Client Partner Section End -->
+
+    <!-- About Us - Start -->
+    <div class="qia-about pt-5 pb-120 bg13  md-pt-80 md-pb-80">
+        <div class="container">
+            <div class="row align-items-center pt-50 pb-50">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="contact-wrap">
+                        <div class="sec-title pb-3">
+                            <h2 class="title pb-3">
+                                About QIA
+                            </h2>
+                            <p class="desc m-0">
+                                Quality Institute of America is a software company based in Houston, Texas. We are dedicated
+                                to improving our client’s profitability through effective management systems. Our flagship
+                                product is QISS QMS software which automates Quality Management Systems by streamlining
+                                processes for greater efficiency. We are excited to introduce QISS LAB, our latest software
+                                designed to further support labs in optimizing their operations.
+                            </p>
+                        </div>
+                        <div class="btn-part">
+                            <a class="readon learn-more"
+                                {{ get_option('home_about_btn_open_another_tab') == 1 ? 'target="_blank"' : '' }}
+                                href="{{ get_option('home_about_btn_url') }}">{{ get_option('home_about_btn_text') }}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="home8-about z-index-1">
+                        <img src="{{ asset('storage/qiss-lab/6_11zon.jpg') }}" alt="QISS LAB">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About Us - End -->
 
     <!-- About Us - Start -->
     <div class="qia-about pt-5 pb-120 bg13  md-pt-80 md-pb-80">
