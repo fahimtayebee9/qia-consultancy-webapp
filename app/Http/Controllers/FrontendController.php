@@ -746,6 +746,20 @@ class FrontendController extends Controller
 
         return view('frontend.static_old_qms_management', compact('meta'));
     }
+
+    public function staticQmsDemo() 
+    {
+        $meta = new \stdClass();
+
+        $meta->title = "Quality Management System (QMS)";
+        $meta->meta_title = "Quality Management System (QMS)";
+        $meta->meta_keyword = "";
+        $meta->article_tag = "";
+        $meta->script_tag = "";
+        $meta->meta_description = "To get your QMS in order, QISS will use the standard ISO approach.";
+
+        return view('frontend.static_qiss_qms-v2', compact('meta'));
+    }
     
     
     public function scheduleAppointment() 

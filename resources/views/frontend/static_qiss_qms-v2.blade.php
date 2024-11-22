@@ -158,21 +158,26 @@
             }
         }
 
-        .qia-industries .industries-row {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+        .industries-grid, .ratings-grid, .aboutUs-grid {
+            display: grid;
+            gap: 20px; 
+            justify-items: center;
+            align-items: center;
         }
 
-        .industries-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+        .ratings-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .industries-grid{
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .aboutUs-grid{
+            grid-template-columns: repeat(5, 1fr);
         }
 
 
-        .industry-card {
-            width: calc(20% - 10px);
+        .industry-card, .ratings-card {
+            width: 100%;
             padding: 35px 25px;
             border-radius: 5px;
             transition: 0.3s all ease-in-out;
@@ -247,10 +252,10 @@
                         <div class="description">
                             <p class="desc" style="text-align: justify;">
                                 Many organizations struggle with quality management challenges like inefficient document handling, 
-                                limited data visibility, and risk management. At QISS, we recognize these frustrations and offer our 
-                                Quality Management Software (QMS) designed to meet your needs. With tailored modules that simplify 
-                                daily tasks, QISS QMS not only helps you maintain compliance with standards like ISO 9001 but also 
-                                improves your overall operational efficiency. Let us help you achieve a 
+                                limited data visibility, and risk management. At QISS, we recognize these frustrations and offer 
+                                our Quality Management Software (QMS) designed to meet your needs. With tailored modules that 
+                                simplify daily tasks, QISS QMS not only helps you maintain compliance with standards like ISO 
+                                9001 but also improves your overall operational efficiency. Let us help you achieve a 
                                 smoother quality management experience—your success is our success.
                             </p>
                         </div>
@@ -259,7 +264,7 @@
                 </div>
 
                 <div class="col-lg-6 col-md-12 pl-30 md-pl-15 align-middle">
-                    <img src="{{ asset('storage/qiss-lab/lab-manager-is-talking-with-chemist-about-the-report.jpg') }}"
+                    <img src="{{ asset('storage/qiss-qms/2048.png') }}"
                         alt="Automate Your Lab Management System">
                 </div>
             </div>
@@ -267,38 +272,36 @@
     </div>
     <!-- Banner Section End -->
 
-    <!-- INDUSTRY Section Start -->
-    <div class="qia-partner style4 pb-20" style="background-color: #ffff;">
+    <!-- Ratings Section Start -->
+    <div class="qia-partner style4" style="background-color: #ffff; padding: 60px 0px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 text-center pb-3">
                     <h2 style="font-size: 32px!important;font-weight: bold;" class="m-0 text-capitalize">
-                        QISS LAB for Your Industries
+                        Our Software Rating
                     </h2>
-                    <p style="font-size: 18px!important;font-weight: bold;" class="m-0">A specialized software for your
-                        needs</p>
                 </div>
                 <div class="col-lg-12 mt-5">
-                    <div class="qia-industries">
-                        <div class="industries-grid">
-                            <!-- Industry Items will go here -->
-                        </div>
+                    <div class="qia-ratings">
+                        <div class="ratings-grid">
+                            <div class="logo-img text-center">
+                                <img src="{{ asset('storage/qiss-qms/cap-badge-same.png') }}" style="width: 70%; margin: auto;" alt="${item.title}" loading="lazy">
+                            </div>
 
-                        <!-- See More Button -->
-                        <div class="see-more-btn text-center mt-4">
-                            <button class="quote-btn" onclick="toggleIndustries()">See More</button>
-                        </div>
+                            <div class="logo-img text-center">
+                                <img src="{{ asset('storage/qiss-qms/get-app-same.png') }}" style="width: 70%; margin: auto;" alt="${item.title}" loading="lazy">
+                            </div>
 
-                        <!-- Loading animation -->
-                        <div class="loading-spinner" style="display: none;">
-                            <div class="spinner"></div>
+                            <div class="logo-img text-center">
+                                <img src="{{ asset('storage/qiss-qms/soft-badge-same.png') }}" style="width: 70%; margin: auto;" alt="${item.title}" loading="lazy">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- INDUSTRY Section End -->
+    <!-- Ratings Section End -->
 
     <!-- How We can Help - Start -->
     <div class="qia-about pb-120 md-pt-80 md-pb-80" style="padding-top: 40px;background: #E7F1FB">
@@ -307,8 +310,13 @@
                 <div class="col-12 col-md-12 col-lg-12 col-xl-12">
                     <h2 class="title text-center mb-0 mt-0 font-weight-bold text-capitalize"
                         style="font-size: 30px !important;">
-                        How Can Our Laboratory Management Software Help You?
+                        Solve Common Quality Management Challenges
                     </h2>
+                    <div class="services-desc text-center">
+                        <p>
+                            Streamline your processes, manage compliance and drive continuous improvement with our QMS software.
+                        </p>
+                    </div>
                 </div>
             </div>
             <div id="our-helps"></div>
@@ -325,13 +333,13 @@
                     <div class="col-lg-9 col-md-12 md-mb-30">
                         <div class="title-wrap">
                             <h2 class="epx-title" style="font-size: 30px!important;">
-                                Make Lab Manager's Life Easier with QISS LAB
+                                QISS QMS Software for Quality Assurance Managers
                             </h2>
                         </div>
                         <p class="m-0" style="font-size: 17px!important; font-weight: 400; color: #ffffff;">
-                            Laboratory management software reduces paperwork and speeds progress by automating tasks,
-                            enabling digital documentation, providing real-time access, and streamlining reporting and
-                            compliance management.
+                            <a href="https://www.researchgate.net/publication/268812128_Costs_and_Benefits_of_ISO9000-based_Quality_Management_Systems_to_Construction_Contractors">Research</a> 
+                            shows that QMS software can help quality managers reduce costs associated with non-compliance, 
+                            rework, and wastage, enhancing management systems and fostering a culture of continuous improvement for better project outcomes.
                         </p>
                     </div>
                     <div class="col-lg-3 text-right col-md-12">
@@ -352,11 +360,11 @@
         <div class="container">
             <div class="sec-title2 text-center mb-45">
                 <h2 class="title title2">
-                    What QISS LAB Can Do?
+                    What QISS QMS Can Do?
                 </h2>
                 <div class="services-desc">
                     <p>
-                        A Software To Help You Manage A Laboratory
+                        Upgrade your quality management system by incorporating advanced capabilities.
                     </p>
                 </div>
             </div>
@@ -376,11 +384,11 @@
                     <div class="col-lg-9 col-md-12 md-mb-30">
                         <div class="title-wrap">
                             <h2 class="epx-title" style="font-size: 30px!important;">
-                                Would You Like To Know More About Our QISS LAB?
+                                We Have a Total of 30 modules in Our QISS QMS Software
                             </h2>
                         </div>
                         <p class="m-0" style="font-size: 17px!important; font-weight: 400;color: #ffffff;">
-                            Contact our team to learn more about our product and how it can help your laboratory staff.
+                            Contact our team to learn more about our management software and how it can help you maintain quality.
                         </p>
                     </div>
                     <div class="col-lg-3 text-right col-md-12">
@@ -402,26 +410,23 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 text-center pb-3">
                     <h2 style="font-size: 32px!important;font-weight: bold;" class="m-0 text-capitalize">
-                        QISS LAB for Your Industries
+                        QISS QMS for Your Industries
                     </h2>
-                    <p style="font-size: 18px!important;font-weight: bold;" class="m-0">A specialized software for your
-                        needs</p>
+                    <p style="font-size: 18px!important;font-weight: bold;" class="m-0">A software tailored to your quality needs</p>
                 </div>
                 <div class="col-lg-12 mt-5">
-                    <div class="qia-industries">
-                        <div class="industries-grid">
-                            <!-- Industry Items will go here -->
-                        </div>
+                    <div class="industries-grid">
+                        <!-- Industry Items will go here -->
+                    </div>
 
-                        <!-- See More Button -->
-                        <div class="see-more-btn text-center mt-4">
-                            <button class="quote-btn" onclick="toggleIndustries()">See More</button>
-                        </div>
+                    <!-- See More Button -->
+                    <div class="see-more-btn text-center mt-4">
+                        <button class="quote-btn" onclick="toggleIndustries()">See More</button>
+                    </div>
 
-                        <!-- Loading animation -->
-                        <div class="loading-spinner" style="display: none;">
-                            <div class="spinner"></div>
-                        </div>
+                    <!-- Loading animation -->
+                    <div class="loading-spinner" style="display: none;">
+                        <div class="spinner"></div>
                     </div>
                 </div>
             </div>
@@ -437,16 +442,14 @@
                     <div class="contact-wrap">
                         <div class="sec-title">
                             <h2 class="title pb-3 m-0">
-                                Why Choose QISS LAB Software To Manage Your Laboratory?
+                                Why Choose QISS QMS for Your Business?
                             </h2>
                             <p class="desc pb-2 m-0" style="font-size: 16px;text-align:justify;">
-                                QISS LAB offers an easy-to-use platform designed to streamline laboratory workflow
-                                management. With customizable reports, users can tailor data presentation to meet specific
-                                needs. The integrated approval system ensures compliance with industry standards, while
-                                web-based access allows for convenient management from any location. Users can easily attach
-                                photos for documentation, improving record accuracy. Additionally, QISS LAB seamlessly
-                                integrates with QISS QMS, providing a comprehensive solution for maintaining quality and
-                                compliance in laboratory operations.
+                                When you choose our Quality Management Software, you’re not just getting a tool—you’re giving your team 
+                                the chance to really excel in quality management. With over 30 years of experience, we understand how to 
+                                make your workflow smoother through effective task scheduling. Our E-Signature feature keeps things secure, 
+                                while our audit trail ensures every action is transparent. We’re here to support you, helping you get the most out of our software. 
+                                Join our satisfied clients who trust us for their quality management needs!
                             </p>
                         </div>
                         <div class="btn-part">
@@ -582,36 +585,53 @@
     <div class="qia-about pt-5 pb-120 bg13  md-pt-80 md-pb-80">
         <div class="container">
             <div class="row align-items-center pt-50 pb-50">
-                <div class="col-lg-6 order-lg-2">
+                <div class="col-lg-12 order-lg-1">
                     <div class="contact-wrap">
-                        <div class="sec-title pb-3">
+                        <div class="sec-title text-center">
                             <h2 class="title pb-3">
                                 About QIA
                             </h2>
                             <p class="desc m-0">
-                                Quality Institute of America is a software company based in Houston, Texas. We are dedicated
-                                to improving our client’s profitability through effective management systems. Our flagship
-                                product is QISS QMS software which automates Quality Management Systems by streamlining
-                                processes for greater efficiency. We are excited to introduce QISS LAB, our latest software
-                                designed to further support labs in optimizing their operations.
+                                The Quality Institute of America (QIA), located in Houston, Texas, is dedicated to enhancing client profitability through effective 
+                                management systems. Our flagship product, QISS QMS software, automates Quality Management Systems to streamline processes and improve 
+                                efficiency. In addition to our software solutions, we offer traditional consulting, training, and auditing services for various Management 
+                                System standards. At QIA, we empower organizations to achieve higher quality standards and drive sustainable growth.
                             </p>
                         </div>
-                        <div class="btn-part">
-                            <a class="readon learn-more"
-                                {{ get_option('home_about_btn_open_another_tab') == 1 ? 'target="_blank"' : '' }}
-                                href="{{ get_option('home_about_btn_url') }}">{{ get_option('home_about_btn_text') }}</a>
+                        <div class="aboutUs-grid" style="margin-top: 30px;">
+                            <!-- Industry Items will go here -->
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="home8-about z-index-1">
-                        <img src="{{ asset('storage/qiss-lab/6_11zon.jpg') }}" alt="QISS LAB">
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- About Us - End -->
+
+    <!-- Get Demo Section Start -->
+    <div class="qia-cta style1 bg7 pt-30 pb-30"style="background: url({{ asset('storage/qiss-lab/Banner-image-1.jpg') }});"
+        alt="QIA">
+        <div class="container">
+            <div class="cta-wrap">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 col-md-12 md-mb-30">
+                        <div class="title-wrap">
+                            <h2 class="epx-title" style="font-size: 30px!important;">
+                                Automate Your Quality Management Process
+                            </h2>
+                        </div>
+                        <p class="m-0" style="font-size: 17px!important; font-weight: 400;color: #ffffff;">
+                            Speed up your management process with QISS QMS software.
+                        </p>
+                    </div>
+                    <div class="col-lg-5 text-right col-md-12">
+                        <img src="{{ asset('storage/qiss-qms/2048X1170.png') }}" alt="Why Choose QISS LAB">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Get Demo Section End -->
 
     <!-- About Us - Start -->
     <div class="qia-about pt-5 pb-120 bg13  md-pt-80 md-pb-80">
@@ -621,14 +641,15 @@
                     <div class="contact-wrap">
                         <div class="sec-title pb-3">
                             <h2 class="title pb-3">
-                                About QIA
+                                QMS Software for Small Business
                             </h2>
                             <p class="desc m-0">
-                                Quality Institute of America is a software company based in Houston, Texas. We are dedicated
-                                to improving our client’s profitability through effective management systems. Our flagship
-                                product is QISS QMS software which automates Quality Management Systems by streamlining
-                                processes for greater efficiency. We are excited to introduce QISS LAB, our latest software
-                                designed to further support labs in optimizing their operations.
+                                Our quality control management software offers several benefits for small businesses, including affordability 
+                                through lower prices and flexible subscription models. Its intuitive interface and easy setup ensure quick 
+                                adoption without extensive training. The software is scalable, accommodating growth and increased complexity 
+                                as businesses expand. Additionally, it enhances compliance with industry standards, reducing the risk of penalties. 
+                                By maintaining high-quality standards, small businesses can also boost customer satisfaction and loyalty, ultimately 
+                                improving operational success.
                             </p>
                         </div>
                         <div class="btn-part">
@@ -640,7 +661,7 @@
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="home8-about z-index-1">
-                        <img src="{{ asset('storage/qiss-lab/6_11zon.jpg') }}" alt="QISS LAB">
+                        <img src="{{ asset('storage/qiss-qms/2048X1170.png') }}" alt="QISS LAB">
                     </div>
                 </div>
             </div>
@@ -745,7 +766,7 @@
 
     <script>
         let isShowingMore = false;
-        
+
         const toggleIndustries = () => {
             const industriesGrid = document.querySelector('.industries-grid');
             const button = document.querySelector('.see-more-btn button');
@@ -753,34 +774,49 @@
 
             // Industry items
             const industries = [{
-                    title: "Chemical Industry",
-                    img: "{{ asset('storage/qiss-lab/Chemical-Industry.svg') }}",
+                    title: "Laboratory",
+                    img: "{{ asset('storage/qiss-qms/landscape-placeholder.svg') }}",
                     url: "javascript:;"
                 },
                 {
-                    title: "Oil & Gas Industry",
-                    img: "{{ asset('storage/qiss-lab/Oil-Gas-Industry.svg') }}",
+                    title: "Manufacturing",
+                    img: "{{ asset('storage/qiss-qms/landscape-placeholder.svg') }}",
                     url: "javascript:;"
                 },
                 {
-                    title: "Marine Industry",
-                    img: "{{ asset('storage/qiss-lab/Marine-Industry.svg') }}",
+                    title: "Oil & Gas",
+                    img: "{{ asset('storage/qiss-qms/landscape-placeholder.svg') }}",
                     url: "{{ route('qiss-lab-marine') }}"
                 },
                 {
-                    title: "Water Industry",
-                    img: "{{ asset('storage/qiss-lab/Water-Industry.svg') }}",
+                    title: "Pharmaceutical",
+                    img: "{{ asset('storage/qiss-qms/landscape-placeholder.svg') }}",
                     url: "javascript:;"
                 },
                 {
-                    title: "Testing Laboratory",
-                    img: "{{ asset('storage/qiss-lab/Testing-Laboratory.svg') }}",
+                    title: "Food",
+                    img: "{{ asset('storage/qiss-qms/landscape-placeholder.svg') }}",
+                    url: "javascript:;"
+                },
+                {
+                    title: "Chemical",
+                    img: "{{ asset('storage/qiss-qms/landscape-placeholder.svg') }}",
+                    url: "javascript:;"
+                },
+                {
+                    title: "Construction",
+                    img: "{{ asset('storage/qiss-qms/landscape-placeholder.svg') }}",
+                    url: "javascript:;"
+                },
+                {
+                    title: "Medical",
+                    img: "{{ asset('storage/qiss-qms/landscape-placeholder.svg') }}",
                     url: "javascript:;"
                 },
                 // Add more industries as needed
             ];
 
-            const initialVisibleCount = 5;
+            const initialVisibleCount = 4;
             
             if(industries.length == initialVisibleCount){
                 button.style.display = 'none';
@@ -839,43 +875,107 @@
             }, 500); // Delay for loading effect
         }
 
+        const lazyLoadAboutUs = () => {
+            const gridContainer = document.querySelector('.aboutUs-grid');
+
+            // Industry items
+            const itemsList = [{
+                    title: "30 Years Of Experience",
+                    img: "{{ asset('storage/qiss-qms/landscape-placeholder.svg') }}",
+                    url: "javascript:;"
+                },
+                {
+                    title: "ISO Trainer",
+                    img: "{{ asset('storage/qiss-qms/landscape-placeholder.svg') }}",
+                    url: "javascript:;"
+                },
+                {
+                    title: "ISO Consultants",
+                    img: "{{ asset('storage/qiss-qms/landscape-placeholder.svg') }}",
+                    url: "{{ route('qiss-lab-marine') }}"
+                },
+                {
+                    title: "Internal ISO Auditor",
+                    img: "{{ asset('storage/qiss-qms/landscape-placeholder.svg') }}",
+                    url: "javascript:;"
+                },
+                {
+                    title: "Customer Support",
+                    img: "{{ asset('storage/qiss-qms/landscape-placeholder.svg') }}",
+                    url: "javascript:;"
+                }
+                // Add more industries as needed
+            ];
+
+            const initialVisibleCount = 5;
+
+            itemsList.slice(0, initialVisibleCount).forEach(item => {
+                let industryElement = document.createElement('div');
+                industryElement.classList.add('industry-card');
+                const title = item.title ? `<span class="industry-title">${item.title}</span>` : '';
+
+                // Populate industry data
+                industryElement.innerHTML = `
+                    <div class="logo-img text-center">
+                        <a href="${item.url}">
+                            <img src="${item.img}" style="width: 100px; margin: auto;" alt="${item.title}" loading="lazy">
+                            ${title}
+                        </a>
+                    </div>
+                `;
+                gridContainer.appendChild(industryElement);
+            });
+        }
+
         const loadServices = () => {
             const defaultIcon = "{{ asset('img/shape.png') }}";
             const servicesList = [{
-                "title": "Data Management",
-                "description": "You can organize, store, and retrieve lab data efficiently to ensure accurate analysis and reporting.",
-                "img": "{{ asset('storage/qiss-lab/Data-Management.svg') }}"
-            }, {
-                "title": "Inventory Management",
-                "description": "You can track supplies, reagents, and equipment to prevent shortages and reduce waste with QISS LAB software.",
-                "img": "{{ asset('storage/qiss-lab/inventory-management.svg') }}"
-            }, {
-                "title": "Order & Invoicing",
-                "description": "Maintain financial efficiency in labs by tracking orders from suppliers and generating invoices for services.",
-                "img": "{{ asset('storage/qiss-lab/order.svg') }}"
-            }, {
-                "title": "Inspection",
-                "description": "Assess equipment, procedures and practices to identify potential hazards and areas for improvement.",
-                "img": "{{ asset('storage/qiss-lab/Inspection.svg') }}"
-            }, {
-                "title": "Sample Management",
-                "description": "Easily track, retain, and analyze samples with our software, ensuring proper documentation during the research process.",
-                "img": "{{ asset('storage/qiss-lab/sample.svg') }}"
-            }, {
-                "title": "Scheduling",
-                "description": "Efficiently manage lab schedules to ensure optimal resource allocation and minimizing conflicts to improve productivity.",
-                "img": "{{ asset('storage/qiss-lab/Scheduling.svg') }}"
-            }, {
-                "title": "Testing",
-                "description": "QISS Lab streamlines testing processes, ensuring accuracy and efficiency in managing lab tests and results.",
-                "img": "{{ asset('storage/qiss-lab/test.svg') }}"
-            }, {
-                "title": "Reporting",
-                "description": "Generate comprehensive reports with ease, allowing for quick insights and informed decision-making.",
-                "img": "{{ asset('storage/qiss-lab/Report.svg') }}"
-            }, {
                 "title": "Document Control",
-                "description": "Maintain organized, secure and easily accessible documents, ensuring compliance and facilitating collaboration.",
+                "description": "Ensure all quality management documents are current, accessible, and properly managed to support compliance.",
+                "img": "{{ asset('storage/qiss-lab/Document-control.svg') }}"
+            }, {
+                "title": "CAPA Management",
+                "description": "Use QISS QMS to identify issues, implement solutions, and prevent future occurrences to ensure continuous improvement.",
+                "img": "{{ asset('storage/qiss-lab/Document-control.svg') }}"
+            }, {
+                "title": "Non-Conformance",
+                "description": "Identify non-conformance issues, analyze their root causes and take actions to improve processes and prevent recurrence",
+                "img": "{{ asset('storage/qiss-lab/Document-control.svg') }}"
+            }, {
+                "title": "Risk Management",
+                "description": "Identify potential risks, assess their impact, and implement strategies to mitigate them effectively with our QMS software.",
+                "img": "{{ asset('storage/qiss-lab/Document-control.svg') }}"
+            }, {
+                "title": "Audit Management",
+                "description": "With QISS QMS, you can plan, execute, and analyze audits to support compliance and improve quality in organizational processes.",
+                "img": "{{ asset('storage/qiss-lab/Document-control.svg') }}"
+            }, {
+                "title": "Supplier Management",
+                "description": "Ensures supplier quality by conducting audits, verifying certificates, and managing NCR to maintain compliance and performance.",
+                "img": "{{ asset('storage/qiss-lab/Document-control.svg') }}"
+            }, {
+                "title": "HSE Management",
+                "description": "Manage incident reports to identify root causes, reduce negative impacts, and implement corrective actions to prevent future accidents.",
+                "img": "{{ asset('storage/qiss-lab/Document-control.svg') }}"
+            }, {
+                "title": "Calibration Management",
+                "description": "Check the instrument’s accuracy and precision of measurements to increase product quality and reduce errors.",
+                "img": "{{ asset('storage/qiss-lab/Document-control.svg') }}"
+            }, {
+                "title": "Training Management",
+                "description": "Plan, deliver and evaluate training programs to improve employee skills so that they can perform their roles effectively.",
+                "img": "{{ asset('storage/qiss-lab/Document-control.svg') }}"
+            },{
+                "title": "Customer Complaint & Survey",
+                "description": "Improve your product quality by addressing and resolving customer issues, leading to greater satisfaction and loyalty.",
+                "img": "{{ asset('storage/qiss-lab/Document-control.svg') }}"
+            },{
+                "title": "Maintenance",
+                "description": "Manage repair of equipment, machinery, and facilities to ensure optimal performance and longevity with our QISS QMS software.",
+                "img": "{{ asset('storage/qiss-lab/Document-control.svg') }}"
+            },{
+                "title": "Impact Monitoring",
+                "description": "Track performance, identify issues, and ensure continuous improvement through data analysis.",
                 "img": "{{ asset('storage/qiss-lab/Document-control.svg') }}"
             }];
 
@@ -886,11 +986,11 @@
 
                 // Populate service data
                 serviceElement.innerHTML = `
-                    <div class="services-item">
+                    <div class="services-item" style="min-height: 318px;">
                         <div class="services-icon">
                             <div class="image-part">
                                 <a href="javascript:;">
-                                    <img src="${service.img}" alt="${service.title}" style="width: 70px!important; height:70px!important;">
+                                    <img src="${service.img}" alt="${service.title}" style="width: 70px!important; height:70px!important;" loading="lazy">
                                 </a>
                             </div>
                         </div>
@@ -915,14 +1015,23 @@
 
         const loadFaq = () => {
             const questionsList = [{
-                "title": "What is lab management software?",
-                "description": "It is a software that can streamline lab workflows by organizing data, tracking inventory, and managing samples efficiently.",
+                "title": "What are the pricing options for your QMS software?",
+                "description": "Our software is available through several pricing tiers, depending on your desired features. We offer monthly and annual subscription plans. Please contact our sales team for specific pricing details and potential promotional offers.",
             }, {
-                "title": "Why should I use it?",
-                "description": "You should use it to automate lab workflows and reduce miscommunications between field staff and lab technicians.",
+                "title": "Can you provide a demo of your software?",
+                "description": "Yes, we offer personalized demos of our QMS software. You can explore the interface, key features, and integration capabilities during the demo. You can schedule a demo through our website.",
             }, {
-                "title": "How can it help lab managers?",
-                "description": "It will allow lab managers to assign a task, see the results and approve any task remotely.",
+                "title": "What is your policy on data security and compliance within your QMS software, particularly for regulated industries?",
+                "description": "We prioritize data security and compliance with industry standards, including ISO and FDA regulations. Our software is designed to help you maintain compliance in regulated industries.",
+            },{
+                "title": "Can I integrate it with existing systems such as ERP?",
+                "description": "Yes. Our quality management system can be integrated with existing systems such as ERP systems.",
+            },{
+                "title": "Do I need different software for HSE?",
+                "description": "No. With QISS QMS, you can manage all types of ISO compliance in one place.",
+            },{
+                "title": "Can I use it for multilocation organizations?",
+                "description": "Yes, QISS QMS is designed with multi-region, multi-area, and multi-location functionality. With this single software, you can efficiently manage your Quality Management System (QMS) across all your global locations while maintaining designated user permissions. Additionally, QISS QMS is a multi-program solution, enabling you to manage not only your Quality Management System but also Food Safety Management and Environmental Management Systems within the same platform.",
             }];
 
             // Assuming servicesList is already populated with data
@@ -965,30 +1074,30 @@
         const loadHelpSection = () => {
             const helpsList = [
                 {
-                    "title": "Automate Your Lab Management System",
-                    "description": "Automating your lab management system can significantly improve efficiency and accuracy. By integrating QISS LAB software, you can simplify processes such as sample tracking, inventory management, and data analysis. Automation reduces human error, ensuring reliable results and better compliance with regulatory standards.",
-                    "img": "{{ asset('storage/qiss-lab/automate-lab-workflow.jpg') }}",
+                    "title": "Document Handling",
+                    "description": "Inefficient document handling is a common challenge for organizations, leading to frustrating version control issues and misplaced files. Searching for essential documents can be a hassle, especially when outdated versions surface. Quality control management software addresses this by automating document control and centralizing all documentation. This ensures access to the latest versions, simplifies the review and approval process, and significantly reduces errors. Ultimately, QISS QMS provides peace of mind, allowing your team to focus on what truly matters.",
+                    "img": "{{ asset('storage/qiss-qms/2048X1170.png') }}",
                     "hasButton": false,
                     "buttonUrl": null,
                     "buttonText": null
                 }, {
-                    "title": "Increase Productivity & Save Time",
-                    "description": "Lab management software improves productivity and saves time by automating routine tasks. With simplified workflows, researchers can focus on critical activities rather than administrative burdens. Real-time data access enables quick decision-making, while automated reporting features minimize manual documentation. By optimizing resource allocation, laboratory software creates a more efficient environment, ultimately leading to faster research outcomes and improved overall performance.",
-                    "img": "{{ asset('storage/qiss-lab/improve-productivity.jpeg') }}",
+                    "title": "Real-Time Reporting",
+                    "description": "Limited real-time data visibility can significantly hold back organizations by slowing down decision-making and making it difficult to identify emerging quality issues. Our QISS Quality Management Software provides real-time dashboards and reporting tools that enable teams to monitor key quality metrics effortlessly. This improved visibility supports proactive management of quality issues, allowing for timely corrective actions that keep operations running smoothly and efficiently.",
+                    "img": "{{ asset('storage/qiss-qms/2048X1170.png') }}",
                     "hasButton": false,
                     "buttonUrl": null,
                     "buttonText": null
                 }, {
-                    "title": "Reducing Risk of Errors",
-                    "description": "Our software can significantly reduce the risk of errors by automating data entry and standardizing processes. By minimizing manual tasks, it decreases the likelihood of human mistakes, ensuring more accurate results. Real-time data validation alerts users to discrepancies, enhancing data integrity. Implementing a lab management software fosters a more reliable environment, allowing researchers to focus on quality and precision in their work.",
-                    "img": "{{ asset('storage/qiss-lab/risk-of-error.jpg') }}",
+                    "title": "Compliance Challenges",
+                    "description": "Dealing with compliance challenges can be overwhelming for many organizations, especially when trying to keep up with industry standards and regulations. Without effective management, this can lead to costly penalties. QISS QMS makes compliance management easy by automating key workflows and providing robust audit management tools. Our quality management software ensures alignment with standards like ISO 9001, preparing you for audits and minimizing non-compliance risk. This proactive approach allows you to focus on your core operations with confidence.",
+                    "img": "{{ asset('storage/qiss-qms/2048X1170.png') }}",
                     "hasButton": false,
                     "buttonUrl": null,
                     "buttonText": null
                 }, {
-                    "title": "Prevent Raw Data Loss",
-                    "description": "Preventing data loss is crucial in lab management, and our specialized QISS LAB software offers robust solutions. Automated backups ensure that critical research data is securely stored and easily retrievable. Real-time monitoring alerts users to potential issues, while user access controls safeguard sensitive information. By centralizing data management, laboratory management software minimizes risks, improving both compliance and research integrity.",
-                    "img": "{{ asset('storage/qiss-lab/prevent-lab-data-loss.jpg') }}",
+                    "title": "Risk Management",
+                    "description": "Ineffective risk management poses a significant challenge for organizations, often leading to reactive responses rather than proactive solutions. This frustration comes from scrambling to address issues after they arise instead of preventing them. Our QISS QMS Software has built-in risk management features that help organizations systematically identify, assess, and prioritize risks. By establishing a structured approach to risk management, businesses can implement preventive measures that tackle current challenges and promote continuous improvement in their quality processes.",
+                    "img": "{{ asset('storage/qiss-qms/2048X1170.png') }}",
                     "hasButton": false,
                     "buttonUrl": null,
                     "buttonText": null
@@ -1014,7 +1123,7 @@
                     </div>
                     <div class="col-lg-6 ${orderImgClass}">
                         <div class="home8-about z-index-1">
-                            <img src="${helpItem.img}" alt="${helpItem.title}">
+                            <img src="${helpItem.img}" alt="${helpItem.title}" loading="lazy">
                         </div>
                     </div>
                     ${helpItem.hasButton ? `
@@ -1034,6 +1143,7 @@
             loadServices();
             loadFaq();
             loadHelpSection();
+            lazyLoadAboutUs();
         }
     </script>
 
