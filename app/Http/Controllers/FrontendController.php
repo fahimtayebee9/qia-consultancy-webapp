@@ -751,12 +751,12 @@ class FrontendController extends Controller
     {
         $meta = new \stdClass();
 
-        $meta->title = "Quality Management System (QMS)";
-        $meta->meta_title = "Quality Management System (QMS)";
+        $meta->title = "Quality Control Management Software | QISS QMS | Get A Demo";
+        $meta->meta_title = "Quality Control Management Software | QISS QMS | Get A Demo";
         $meta->meta_keyword = "";
         $meta->article_tag = "";
         $meta->script_tag = "";
-        $meta->meta_description = "To get your QMS in order, QISS will use the standard ISO approach.";
+        $meta->meta_description = "QISS QMS helps organizations overcome quality management challenges, ensuring compliance with standards and boosting overall operational efficiency.";
 
         return view('frontend.static_qiss_qms-v2', compact('meta'));
     }
