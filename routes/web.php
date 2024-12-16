@@ -3,6 +3,9 @@
 Route::redirect('/qiss-lab-demo', '/qiss-lab', 301);
 Route::redirect('/qiss-lab/marine-demo', '/qiss-lab/marine', 301);
 
+Route::get('/','FrontendController@index')->name('index');
+Route::get('/home-demo','FrontendController@indexDemo')->name('index-demo');
+
 // Static Menu Start 
 Route::post('schedule-appointment', 'FrontendController@scheduleAppointment')->name('schedule-appointment');
 Route::get('static-menu-one', 'FrontendController@staticMenuOne')->name('static-menu-one'); # copy this link
@@ -13,10 +16,10 @@ Route::get('lab-management', 'FrontendController@staticLABManagement')->name('la
 Route::get('qiss-lab', 'FrontendController@staticQISSLab')->name('qiss-lab');
 Route::get('qiss-lab/marine', 'FrontendController@staticQISSLabMarine')->name('qiss-lab-marine');
 Route::get('old-qms-management', 'FrontendController@staticOldQMSManagement')->name('old-qms-management');	
-Route::get('qiss-qms-demo', 'FrontendController@staticQmsDemo')->name('qiss-lab-demo');
+Route::get('qiss-qms-demo', 'FrontendController@staticQmsDemo')->name('qiss-qms-demo');
+Route::get('nonconformance-management-software-demo', 'FrontendController@staticNcrDemo')->name('qiss-ncr-demo');
 // Static Menu End
 
-Route::get('/','FrontendController@index')->name('index');
 
 Route::get('api/v1/text-message', 'FrontendController@text_message');
 Route::post('api/v1/phone-book', 'FrontendController@post_text_message');

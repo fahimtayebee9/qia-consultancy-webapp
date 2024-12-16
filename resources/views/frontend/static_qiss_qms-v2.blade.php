@@ -9,8 +9,14 @@
         .bg-E7F1FB{
             background: #E7F1FB!important;
         }
+        .bg-FFF{
+            background: #FFF;
+        }
         .font-16{
             font-size: 16px!important;
+        }
+        .font-15{
+            font-size: 15px!important;
         }
         .cta-link{
             color: #fff;
@@ -446,8 +452,101 @@
     </div>
     <!-- INDUSTRY Section End -->
 
+    <!-- How We can Help - Start -->
+    <div class="qia-about pt-5 pb-120 bg-FFF md-pt-80 md-pb-80">
+        <div class="container">
+            <div class="row align-items-center pt-50 pb-50">
+                <div class="col-lg-6 order-lg-1 md-pl-15">
+                    <div class="contact-wrap">
+                        <div class="sec-title">
+                            <h2 class="title pb-3 m-0">
+                                Why Choose QISS QMS for Your Business?
+                            </h2>
+                            <p class="desc pb-2 m-0 font-16" style="text-align:justify;">
+                                When you choose our Quality Management Software, you’re not just getting a tool—you’re giving your team the chance 
+                                to really excel in quality management. With over 30 years of experience, we understand how to make your workflow 
+                                smoother through effective task scheduling. Our E-Signature feature keeps things secure, while our audit trail ensures 
+                                every action is transparent. We’re here to support you, helping you get the most out of our software. 
+                                Join our satisfied clients who trust us for their quality management needs!
+                            </p>
+                        </div>
+                        <div class="btn-part">
+                            <a class="readon learn-more"
+                                {{ get_option('home_about_btn_open_another_tab') == 1 ? 'target="_blank"' : '' }}
+                                href="{{ get_option('home_about_btn_url') }}">
+                                {{ get_option('home_about_btn_text') }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2">
+                    <div class="home8-about z-index-1">
+                        <img src="{{ asset('storage/qiss-qms/banners/Banner-Image-12.png') }}" alt="Why Choose QISS QMS">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- How We can Help - End -->
+
+    <!-- Testimonial Section -->
+    <div class="qia-testimonial style8 gray-color pt-30 pb-50 md-pt-80 md-pb-80">
+        <div class="container">
+            <div class="sec-title6 mb-50 text-center">
+                <span class="sub-text new-text">{{ get_option('testimonial_title') }}</span>
+                <h2 class="title mt-2 mb-0">{{ get_option('testimonial_header') }}</h2>
+            </div>
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12">
+                    <div class="testimonial-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30"
+                        data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800"
+                        data-dots="false" data-nav="false" data-nav-speed="false" data-center-mode="false"
+                        data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false"
+                        data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="false"
+                        data-ipad-device2="3" data-ipad-device-nav2="false" data-ipad-device-dots2="false"
+                        data-md-device="3" data-md-device-nav="false" data-md-device-dots="true">
+
+                        @php
+                            $testimonials = App\Testimonial::get();
+                            $testimonialCounter = 1;
+                        @endphp
+                        @foreach ($testimonials as $testimonial)
+                            @if ($testimonialCounter == 1)
+                                @php
+                                    $testimonialName = $testimonial->name;
+                                    $testimonialDesignation = $testimonial->designation;
+                                    $testimonialLink = $testimonial->id;
+                                    $testimonialCounter += 1;
+                                @endphp
+                            @endif
+                            <div class="testi-item" data-id="{{ $testimonial->id }}">
+
+                                <div class="item-content-basic">
+
+                                    <div class="testi-information mb-3">
+                                        <div class="testi-content pl-0">
+                                            <div class="testi-name">{{ $testimonial->name }}</div>
+                                            <span class="testi-title">{{ $testimonial->designation }}</span>
+                                        </div>
+                                    </div>
+
+                                    <span>
+                                        <img src="{{ asset('storage/home-page-content/' . $testimonial->rating) }}" alt="Rating Images">
+                                    </span>
+                                    <p>{{ $testimonial->content }}</p>
+                                </div>
+
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial Section -->
+
     <!-- Client Partner Section Start -->
-    <div class="qia-partner style4 pb-20" style="background-color: #ffff;">
+    <div class="qia-partner style4 pb-20 bg-FFF">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 text-center pb-3">
@@ -479,140 +578,8 @@
     </div>
     <!-- Client Partner Section End -->
 
-    <!-- How We can Help - Start -->
-    <div class="qia-about pt-5 pb-120 bg-E7F1FB md-pt-80 md-pb-80">
-        <div class="container">
-            <div class="row align-items-center pt-50 pb-50">
-                <div class="col-lg-6 order-lg-1 md-pl-15">
-                    <div class="contact-wrap">
-                        <div class="sec-title">
-                            <h2 class="title pb-3 m-0">
-                                Why Choose QISS QMS for Your Business?
-                            </h2>
-                            <p class="desc pb-2 m-0 font-16" style="text-align:justify;">
-                                When you choose our Quality Management Software, you’re not just getting a tool—you’re giving your team the chance 
-                                to really excel in quality management. With over 30 years of experience, we understand how to make your workflow 
-                                smoother through effective task scheduling. Our E-Signature feature keeps things secure, while our audit trail ensures 
-                                every action is transparent. We’re here to support you, helping you get the most out of our software. 
-                                Join our satisfied clients who trust us for their quality management needs!
-                            </p>
-                        </div>
-                        <div class="btn-part">
-                            <a class="readon learn-more"
-                                {{ get_option('home_about_btn_open_another_tab') == 1 ? 'target="_blank"' : '' }}
-                                href="{{ get_option('home_about_btn_url') }}">
-                                {{ get_option('home_about_btn_text') }}
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-2">
-                    <div class="home8-about z-index-1">
-                        <img src="{{ asset('storage/qiss-qms/banners/Why-select-QISS-QMS.jpg') }}" alt="Why Choose QISS QMS">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- How We can Help - End -->
-
-    <!-- Testimonial Section -->
-    <div class="qia-testimonial style8 gray-color pt-30 pb-50 md-pt-80 md-pb-80">
-        <div class="container">
-            <div class="sec-title6 mb-50 text-center">
-                <span class="sub-text new-text">{{ get_option('testimonial_title') }}</span>
-                <h2 class="title mt-2 mb-0">{{ get_option('testimonial_header') }}</h2>
-            </div>
-            <div class="row">
-                <div class="col-xl-12 col-lg-12 col-md-12">
-                    <div class="testimonial-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30"
-                        data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800"
-                        data-dots="false" data-nav="false" data-nav-speed="false" data-center-mode="false"
-                        data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false"
-                        data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="false"
-                        data-ipad-device2="3" data-ipad-device-nav2="false" data-ipad-device-dots2="false"
-                        data-md-device="3" data-md-device-nav="false" data-md-device-dots="true">
-
-                        {{-- @php
-                            $testimonials = App\Testimonial::get();
-                            $testimonialCounter = 1;
-                        @endphp
-                        @foreach ($testimonials as $testimonial)
-                            @if ($testimonialCounter == 1)
-                                @php
-                                    $testimonialName = $testimonial->name;
-                                    $testimonialDesignation = $testimonial->designation;
-                                    $testimonialLink = $testimonial->id;
-                                    $testimonialCounter += 1;
-                                @endphp
-                            @endif
-                            
-                        @endforeach --}}
-
-                        <div class="testi-item" style="min-height: 458px;">
-                            <div class="item-content-basic">
-                                <div class="testi-information mb-3">
-                                    <div class="testi-content pl-0">
-                                        <div class="testi-name">Michael P.</div>
-                                        <span class="testi-title">Quality Manager</span>
-                                    </div>
-                                </div>
-
-                                <span><img src="{{ asset('storage/qiss-qms/rating.png') }}" alt="Rating Images"></span>
-                                <p class="font-16">I am very satisfied with QISS and its capabilities to manage my quality management affairs. The customer service is the key to having a full service software team on my side.</p>
-                            </div>
-                        </div>
-
-                        <div class="testi-item" style="min-height: 458px;">
-                            <div class="item-content-basic">
-                                <div class="testi-information mb-3">
-                                    <div class="testi-content pl-0">
-                                        <div class="testi-name">Bashir I.</div>
-                                        <span class="testi-title">Director Global QA</span>
-                                    </div>
-                                </div>
-
-                                <span><img src="{{ asset('storage/qiss-qms/rating.png') }}" alt="Rating Images"></span>
-                                <p class="font-16">Great, have used almost all features and modules, has made my life extremely easy as software does most of the management functions and keep a track of planned activities with automatic notifications. Certainly, the most user friendly QMS software of at least five others that I have used. i would strongly recommend it to others.</p>
-                            </div>
-                        </div>
-
-                        <div class="testi-item" style="min-height: 458px;">
-                            <div class="item-content-basic">
-                                <div class="testi-information mb-3">
-                                    <div class="testi-content pl-0">
-                                        <div class="testi-name">Tyler H.</div>
-                                        <span class="testi-title">Quality Manager</span>
-                                    </div>
-                                </div>
-
-                                <span><img src="{{ asset('storage/qiss-qms/rating.png') }}" alt="Rating Images"></span>
-                                <p class="font-16">Great for managing ISO 9001 certified</p>
-                            </div>
-                        </div>
-
-                        <div class="testi-item" style="min-height: 458px;">
-                            <div class="item-content-basic">
-                                <div class="testi-information mb-3">
-                                    <div class="testi-content pl-0">
-                                        <div class="testi-name">Patrick F.</div>
-                                        <span class="testi-title">VP Quality and Operations</span>
-                                    </div>
-                                </div>
-
-                                <span><img src="{{ asset('storage/qiss-qms/rating.png') }}" alt="Rating Images"></span>
-                                <p class="font-16">I like the ability to maintain our QMS and HSE documents in the document module. Prior to the implementation of QISS, files were located sporadically in different locations, and it was difficult to search for them as well as make sure current revs were being utilized by all employees.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial Section -->
-
     <!-- About Us - Start -->
-    <div class="qia-about pt-5 pb-120 md-pt-80 md-pb-80">
+    <div class="qia-about pt-5 pb-120 bg-E7F1FB md-pt-80 md-pb-80">
         <div class="container">
             <div class="row align-items-center pt-50 pb-50">
                 <div class="col-lg-12 order-lg-1">
@@ -636,7 +603,7 @@
     <!-- About Us - End -->
 
     <!-- Get Demo Section Start -->
-    <div class="qia-cta style1 bg7 pt-30 pb-30"style="background: url({{ asset('storage/qiss-qms/banners/Banners-2.jpg') }});"
+    <div class="qia-cta style1 bg7 pt-30 pb-30" style="background: url({{ asset('storage/qiss-qms/banners/Banners-2.jpg') }});"
         alt="QIA">
         <div class="container">
             <div class="cta-wrap">
@@ -657,7 +624,7 @@
                         </div>
                     </div>
                     <div class="col-lg-5 text-right col-md-12">
-                        <img src="{{ asset('storage/qiss-qms/banners/Automate your quality management.jpg') }}" alt="Why Choose QISS LAB">
+                        <img src="{{ asset('storage/qiss-qms/banners/Banner-Image-11.png') }}" alt="Why Choose QISS LAB">
                     </div>
                 </div>
             </div>
@@ -937,7 +904,7 @@
             itemsList.slice(0, initialVisibleCount).forEach(item => {
                 let industryElement = document.createElement('div');
                 industryElement.classList.add('industry-card');
-                const title = item.title ? `<span class="industry-title font-16">${item.title}</span>` : '';
+                const title = item.title ? `<span class="industry-title font-15">${item.title}</span>` : '';
 
                 // Populate industry data
                 industryElement.innerHTML = `

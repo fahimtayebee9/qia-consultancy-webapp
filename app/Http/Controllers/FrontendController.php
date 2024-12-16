@@ -165,6 +165,34 @@ class FrontendController extends Controller
         return view('frontend.welcome', compact('meta'));
     }
 
+    public function indexDemo()
+    {
+        $date = now()->format('Y-m-d');
+
+        $meta = new \stdClass();
+        $meta->title            = "Software Company for Management Systems | QIA | Contact Us" ?? 'QI-A';
+        $meta->meta_title       = "Software Company for Management Systems | QIA | Contact Us" ?? 'QI-A';
+        $meta->meta_keyword     = "Software Company for Management Systems" ?? '';
+        $meta->article_tag      = get_option('article_tag') ?? '';
+        $meta->meta_description = "At our software company, we specialize in creating innovative management systems designed to improve organizational efficiency. Contact us today." ?? '';
+
+        // Return the view properly
+        return view('frontend.homepage-v2', compact('meta'));
+    }
+
+    public function staticNcrDemo(){
+        $date = now()->format('Y-m-d');
+
+        $meta = new \stdClass();
+        $meta->title            = "Non-Conformance Management Software | Get A Demo" ?? 'QI-A';
+        $meta->meta_title       = "Non-Conformance Management Software | Get A Demo" ?? 'QI-A';
+        $meta->meta_keyword     = "Non-Conformance Management Software" ?? '';
+        $meta->article_tag      = get_option('article_tag') ?? '';
+        $meta->meta_description = "Our software lets you quickly identify, track, and resolve non-conformance events across your organization to ensure quality standards. Get a demo." ?? '';
+
+        // Return the view properly
+        return view('frontend.static_ncr-v1', compact('meta'));
+    }
     
     public function about() {
         $meta = new \stdClass();
